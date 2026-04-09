@@ -255,6 +255,10 @@ body{
 .bni-teshis.on .bni-lb{color:var(--orange2);}
 .bni-teshis.on .bni-dot{background:var(--orange);}
 
+.tab-klasik.on{background:var(--blue);box-shadow:0 0 8px var(--blue),0 0 20px rgba(0,136,255,.4);}
+.bni-klasik.on .bni-ic{filter:drop-shadow(0 0 5px var(--blue));}
+.bni-klasik.on .bni-lb{color:var(--blue2);}
+.bni-klasik.on .bni-dot{background:var(--blue);}
 .lbl-cyan{color:var(--cyan);}
 .lbl-green{color:var(--green);}
 .lbl-red{color:var(--red);}
@@ -294,6 +298,7 @@ body{
   <div class="tab tab-kart" onclick="nav('kart')"><span>🔲</span>PCB Kartlar</div>
   <div class="tab tab-qa" onclick="nav('qa')"><span>🧪</span>40 Soru</div>
   <div class="tab tab-tip" onclick="nav('tip')"><span>⚡</span>Püf Noktası</div>
+  <div class="tab tab-klasik" onclick="nav('klasik')"><span>🔩</span>Mekanik</div>
   <div class="tab tab-teshis" onclick="nav('teshis')"><span>🎯</span>Teşhis</div>
 </div>
 
@@ -446,6 +451,80 @@ body{
       <div class="fi-cause">CAN bus üzerinde veri paket hataları aşıldı.</div>
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. CAN-H/L enerji yokken = 60 Ohm<br>2. CAN sinyal: H=2.5-3.5V, L=1.5-2.5V<br>3. CAN transceiver kontrol<br>4. Shield topraklama tek noktadan</div>
+    </div>
+  </div>
+</div>
+
+<div class="slb">SM52 / SM74 ÖZEL HATA KODLARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e5')">
+    <div class="ac-ic ic-orange">🖨️</div>
+    <div class="ac-title">SM52 — Özel Hata Kodları</div>
+    <span class="ac-badge b-amber">SM52</span>
+    <span class="ac-arr" id="a-e5">▶</span>
+  </div>
+  <div class="ac-body" id="e5">
+    <div class="fi" data-s="sm52 20:33 20:34 20:65 basic module fan">
+      <div class="fi-code">20:33 / 20:34 / 20:65</div>
+      <div class="fi-name">SM52 — Basic Module Fan / Isıtıcı Hatası</div>
+      <div class="fi-cause">Basic Module 2 fanı arızalanınca ısıtma lambaları çalışmayı durduruyor. Soğutma sistemi fan arızasına bağlı.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Basic Module 2 fanını kontrol et ve değiştir<br>2. Soğutma sıvısı seviyesini kontrol et<br>3. Fan değişimi sonrası ısıtma lambalarını test et<br>4. NTC sensörü kontrol et (25°C = 10-47kΩ)</div>
+      <div class="fi-tip">⭐ Fan değiştirince sorun çözülmüyorsa Basic Module 2 kart kondansatörlerini ESR ile ölç.</div>
+    </div>
+    <div class="fi" data-s="sm52 hız 3000 alarm encoder ewk">
+      <div class="fi-code">SM52 — Hız Alarmı</div>
+      <div class="fi-name">3000 Devir Üzerinde Alarm / Makine Duruyor</div>
+      <div class="fi-cause">1996 model SM52'lerde yaygın sorun. Ana motor encoder sinyali veya EWK kart referans hatası. Motor devri kontrol devresi sapıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. EWK1 kart kontrol (intermittent arıza çok yaygın)<br>2. Motor encoder A/B kanal sinyali osiloskopla ölç<br>3. EWK kart hız referans potansiyometresi temizle<br>4. Inverter kendi hata kodunu oku<br>5. Motor fırça aşınması kontrol</div>
+      <div class="fi-tip">⭐ EWK1 kartı sökme-takma ile geçici çözüm oluyorsa konnektör oksidasyonu — kontakları temizle.</div>
+      <div class="fi-warn">⚠️ EWK1 değiştirilecekse parametre yedeklemesi şart!</div>
+    </div>
+  </div>
+</div>
+
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e6')">
+    <div class="ac-ic ic-cyan">⚙️</div>
+    <div class="ac-title">SM74 — Özel Hata Kodları</div>
+    <span class="ac-badge b-cyan">SM74</span>
+    <span class="ac-arr" id="a-e6">▶</span>
+  </div>
+  <div class="ac-body" id="e6">
+    <div class="fi" data-s="sm74 ssk 7f7f servo motor init dyn hata">
+      <div class="fi-code">SSK-1 / SSK-2: 7F7F</div>
+      <div class="fi-name">SM74 — Servo Motor Tanıma Hatası</div>
+      <div class="fi-cause">SSK modülleri arası parazit. 1996 SM74'lerde çok yaygın. Makine INIT/DYN testinde tüm servo motorları görmüyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM ADIMLAR</div>
+      <div class="fi-fix">1. SSK2 modülünü yuvadan çıkar, makineyi aç<br>2. SSK-1 INIT/DYN değerlerini kontrol et<br>3. SSK modüllerini tek tek test et<br>4. SSR ana kartın arkasındaki mavi konnektörleri temizle<br>5. SSR↔REE flat kablo kontrolü<br>6. NTK kartları: +5V ve +24V tolerans ±0.7% içinde mi?</div>
+      <div class="fi-tip">⭐ SSK modülündeki kırmızı LED: Normal açılışta yanar, motor dönerken söner. Bozuk SSK'da LED geç yanar veya hiç yanmaz.</div>
+      <div class="fi-warn">⚠️ NTK voltajları %0.7 dışına çıkmışsa SSK tanıma kesinlikle başarısız olur — önce voltajları düzelt!</div>
+    </div>
+    <div class="fi" data-s="sm74 hak ffdd ffef sek ffcf servo merdane durmuyor">
+      <div class="fi-code">HAK-FFDD / SAK-FFEF / SEK-FFCF</div>
+      <div class="fi-name">SM74 — Merdane Motorları Çalışmıyor</div>
+      <div class="fi-cause">Alcolor merdane motorları INIT testinde görünmüyor. HAK kartı BLA-IC veya Tacho-IC arızası.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. HAK kartı BLA-IC (Brushless drive IC) değiştir<br>2. HAK kartı Tacho-IC kontrol<br>3. HAK EPROM ve RAM çiplerini kontrol et<br>4. LTK LED durumu: Motor dönerken sönmeli, beklerken yanmalı<br>5. F1/F2 sigortaları multimetre ile ölç<br>6. 48V DC hat kontrol (STK kartı)</div>
+      <div class="fi-tip">⭐ LTK LED arızada yanıyorsa: HAK'ta etkinleştirme yok, aşırı akım veya sigorta yanmış demektir.</div>
+    </div>
+    <div class="fi" data-s="sm74 register kayması timing zincir besleme">
+      <div class="fi-code">SM74 — Register / Paso Kayması</div>
+      <div class="fi-name">Besleme Zamanlaması Kayıyor — Register Tutmuyor</div>
+      <div class="fi-cause">SM74'lerde ÇOKBILINEN arıza: Besleme timing zinciri uzuyor. 1999-2003 model makinelerde neredeyse kaçınılmaz. Hava kaçağı da besleme bozukluğuna yol açıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM ADIMLAR</div>
+      <div class="fi-fix">1. Önce hava kaçağını bul ve tamir et<br>2. Otomatik ayarları sıfırla, timing'i manuel kontrol et<br>3. Timing zincirini değiştir (standart bakım parçası)<br>4. Besleme zamanlamasını fabrika ayarına getir<br>5. Servo motor dişlilerini aşınmaya karşı kontrol et</div>
+      <div class="fi-tip">⭐ SM74 timing zinciri uzaması ÇOKYAYGINTIR — "kaç tane zincir taktım" diye soran ustalar var! Yeni modellerde (2003+) yağlama noktası iyileştirildi.</div>
+      <div class="fi-warn">⚠️ Hava kaçağı önce çözülmezse timing ayarı kalıcı olmaz — kalın karton basarken özellikle bozulur.</div>
+    </div>
+    <div class="fi" data-s="sm74 malfunction drive fail-safe board initest">
+      <div class="fi-code">INITEST: MALFUNCTION DRIVE FAIL-SAFE</div>
+      <div class="fi-name">SM74 CP2000 — Drive Fail-Safe Board Arızası</div>
+      <div class="fi-cause">CP2000 konsolunda INITEST hatası. DYN TEST S-HAK-3M3 FFBF ile birlikte çıkıyor. Makine çalışmıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. CP2000 kabinindeki BEK kartını kontrol et<br>2. BEK kart EPROM modülünü değiştir (register sorunu çözümü)<br>3. 15K37 rölesini kontrol et (48V DC bağlantısı)<br>4. STK kartı kontrol<br>5. SSK modülleri NTK voltajları ±0.7%</div>
+      <div class="fi-tip">⭐ BEK kart EPROM değişimi register sorununu %80 çözüyor. Güvenilir kaynak: Heidelberg yetkili servis veya aftermarket EPROM tedarikçileri.</div>
     </div>
   </div>
 </div>
@@ -757,6 +836,176 @@ body{
 </div>
 </div>
 
+<!-- KLASİK ARIZALAR -->
+<div class="sec" id="sec-klasik">
+<div class="slb">BESLEME SİSTEMİ ARIZALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m1')">
+    <div class="ac-ic ic-blue">📄</div>
+    <div class="ac-title">Besleme / Feeder Arızaları</div>
+    <span class="ac-badge b-blue">BESLEME</span>
+    <span class="ac-arr" id="a-m1">▶</span>
+  </div>
+  <div class="ac-body" id="m1">
+    <div class="fi" data-s="besleme kağıt çift almıyor yanlış zamanlama feeder sm52 sm74">
+      <div class="fi-code">BESLEME — Kağıt Düzensiz Alınıyor</div>
+      <div class="fi-name">Kağıt Düzensiz / Geç / Erken Alınıyor</div>
+      <div class="fi-cause">Vantuz zamanlaması kaymış, hava basıncı dengesiz veya vantuz lastiği aşınmış.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Vantuz lastiği aşınma kontrolü — sertleşmiş veya çatlak varsa değiştir<br>2. Hava basıncı: 2-6 bar stabil mi?<br>3. Besleme emme bandı (suction belt) delikleri tıkalı mı?<br>4. Emme bandı gerginliği kontrol<br>5. Vantuz yay kuvveti kontrol<br>6. Timing ayarı: Otomatik ayarları sıfırla, manuel kontrol</div>
+      <div class="fi-tip">⭐ SM74'te timing zinciri uzaması BU SORUNUN başlıca sebebidir. Önce zinciri kontrol et!</div>
+    </div>
+    <div class="fi" data-s="besleme bant delik emme sm52 vakum">
+      <div class="fi-code">BESLEME — Emme Bandı</div>
+      <div class="fi-name">Emme Bandı Yıpranmış / Kayıyor</div>
+      <div class="fi-cause">SM52 emme bandı (960×60×1.6mm) zamanla delikler tıkanıyor veya bant yırtılıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Bandı söküp delikleri hava ile temizle<br>2. Bant yüzeyini izopropanol ile sil<br>3. Yırtık veya tıkalı band değiştir (SM52: 960x60mm)<br>4. Vakum seviyesini kontrol et</div>
+      <div class="fi-tip">⭐ Emme bandı değişimi sonrası her zaman vakum kalibrasyonu yap.</div>
+    </div>
+    <div class="fi" data-s="besleme yan lay elektrik elektronik kontrol kaçma">
+      <div class="fi-code">YAN LAY — Elektronik Kontrol</div>
+      <div class="fi-name">Yan Lay Pozisyonu Kaçıyor</div>
+      <div class="fi-cause">Elektronik yan lay kontrolü (electronic sidelay) kayboluyor veya tutarsız çalışıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Yan lay motor encoder sinyali kontrol<br>2. Yan lay kart (SLM) motor PWM çıkışı ölç<br>3. Referans pot temizle (oksidasyon)<br>4. Mekanik tıkanma var mı kontrol<br>5. Sıfırlama: CP-Tronic'ten yan lay kalibrasyonu</div>
+    </div>
+  </div>
+</div>
+
+<div class="slb">ALCOLOR ISLAK SISTEM ARIZALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m2')">
+    <div class="ac-ic ic-cyan">💧</div>
+    <div class="ac-title">Alcolor — Nemlendirme Sistemi</div>
+    <span class="ac-badge b-cyan">ALCOLOR</span>
+    <span class="ac-arr" id="a-m2">▶</span>
+  </div>
+  <div class="ac-body" id="m2">
+    <div class="fi" data-s="alcolor merdane dönmüyor ıslak sistem nemlendirme sm52 sm74">
+      <div class="fi-code">ALCOLOR — Merdane Çalışmıyor</div>
+      <div class="fi-name">Alcolor Merdaneleri Dönmüyor / Yetersiz Su</div>
+      <div class="fi-cause">HAK kartı arızası veya MID motor sürücüsü sorunu. SM74'te HAK-FFDD hatasıyla birlikte çıkar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. HAK kartı BLA-IC kontrol<br>2. MID kart motor çıkış voltajı (±24V PWM)<br>3. Motor fırça aşınması<br>4. Merdane mili yatak kontrolü<br>5. 24V besleme stabil mi?</div>
+      <div class="fi-tip">⭐ Alcolor merdanesi döndüğü halde yeterli su vermiyorsa: Merdane yüzeyini temizle, su tankı filtresi tıkalı olabilir.</div>
+    </div>
+    <div class="fi" data-s="alcolor su miktarı ayar alkol izopropanol konsantrasyon">
+      <div class="fi-code">ALCOLOR — Su/Alkol Dengesi</div>
+      <div class="fi-name">Baskı Sulanıyor veya Mürekkep Tutumuyor</div>
+      <div class="fi-cause">Su/alkol oranı dengesiz. Baldwin soğutma ünitesi sıcaklık sapması da buna yol açar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Alkol konsantrasyonu: %8-12 izopropanol<br>2. Çözelti sıcaklığı: 10-15°C (Baldwin chiller)<br>3. pH değeri: 4.5-5.5<br>4. İletkenlik: 800-1500 µS/cm<br>5. Baldwin filtre ve pompa kontrolü</div>
+      <div class="fi-warn">⚠️ Yaz aylarında chiller arızası baskı kalitesini direkt etkiler — Baldwin NTC sensörü ve fan kontrol!</div>
+    </div>
+    <div class="fi" data-s="alcolor form merdane şerit iz kağıt üzerinde">
+      <div class="fi-code">ALCOLOR — Merdane İzi</div>
+      <div class="fi-name">Kağıtta Merdane Şeridi / Su Lekesi</div>
+      <div class="fi-cause">Form merdanesi basıncı yanlış ayarlı veya merdane yüzeyi hasarlı.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Form merdanesi baskı ayarı: Heidelberg şerit testi (0.5mm kağıt şerit)<br>2. Merdane sertliği: Shore 25-30A<br>3. Merdane yüzeyi gözenekleri temizle<br>4. Pan merdanesi (duktor) hız oranı ayarı</div>
+    </div>
+  </div>
+</div>
+
+<div class="slb">GTO — ÖZEL ARIZALAR</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m3')">
+    <div class="ac-ic ic-amber">🔶</div>
+    <div class="ac-title">GTO 52 — Klasik Arızalar</div>
+    <span class="ac-badge b-amber">GTO</span>
+    <span class="ac-arr" id="a-m3">▶</span>
+  </div>
+  <div class="ac-body" id="m3">
+    <div class="fi" data-s="gto 52 kağıt almıyor vantuz emme mekanik">
+      <div class="fi-code">GTO — Kağıt Almıyor</div>
+      <div class="fi-name">GTO Kağıt Vantuzu Çalışmıyor</div>
+      <div class="fi-cause">GTO'da cascade besleyici sistemi. Vantuz lastiği sertleşmesi veya hava hattı sızıntısı en yaygın sebep.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Tüm vantuz lastiklerini değiştir (sertleşme kontrolü)<br>2. Hava hattı sızıntı testi (sabunlu su)<br>3. Kompresör basıncı 2-4 bar<br>4. Vantuz yay kuvveti eşitliği<br>5. Kağıt yığın yükseklik sensörü</div>
+      <div class="fi-tip">⭐ GTO vantuz lastikleri SM52'ye göre çok daha hızlı sertleşir — 2 yılda bir toplu değişim önerilir.</div>
+    </div>
+    <div class="fi" data-s="gto mürekkep sistemi form merdane baskı kalitesi">
+      <div class="fi-code">GTO — Mürekkep Sistemi</div>
+      <div class="fi-name">Mürekkep Düzensiz Dağılıyor / Şerit Yapıyor</div>
+      <div class="fi-cause">GTO'nun kısa mürekkep sistemi SM52'ye göre daha hassas. Merdane basınç dengesi kritik.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Form merdanesi basıncı: Şerit testi 5-7mm<br>2. Duktor merdanesi hız ayarı<br>3. Mürekkep sıcaklığı: 20-25°C ideal<br>4. Rider merdanesi temas kontrolü<br>5. Mürekkep bıçağı (rakle) temizliği</div>
+    </div>
+    <div class="fi" data-s="gto baskı silindiri lastik şişme takım">
+      <div class="fi-code">GTO — Baskı Silindiri</div>
+      <div class="fi-name">Blanket Şişiyor / Baskı Kalınlığı Kaçıyor</div>
+      <div class="fi-cause">Blanket altı dolgu (packing) kalınlığı yanlış veya blanket solvent emmiş.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Blanket kalınlığı: 1.95mm standard<br>2. Packing toplam: Blanket dahil 3.25mm (GTO)<br>3. Blanket torku: Eşit ve dengeli sıkılmalı<br>4. Blanket yüzeyini solventle sil, şişme varsa değiştir<br>5. Alt dolgu kağıt (packing sheet) sayısını kontrol</div>
+      <div class="fi-warn">⚠️ Blanket fazla şişmişse silindir dişlileri zarar görebilir!</div>
+    </div>
+  </div>
+</div>
+
+<div class="slb">AUTOPLATE — OTOMATİK PLAKA SİSTEMİ</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m4')">
+    <div class="ac-ic ic-purple">🔧</div>
+    <div class="ac-title">Autoplate — Otomatik Plaka Arızaları</div>
+    <span class="ac-badge b-purple">PLAKA</span>
+    <span class="ac-arr" id="a-m4">▶</span>
+  </div>
+  <div class="ac-body" id="m4">
+    <div class="fi" data-s="autoplate plaka sıkışma klips pnömatik sm52 sm74">
+      <div class="fi-code">AUTOPLATE — Plaka Takılmıyor</div>
+      <div class="fi-name">Autoplate Plakayı Sıkıştırmıyor / Serbest Bırakmıyor</div>
+      <div class="fi-cause">Plaka klips pnömatik silindiri arızası veya plaka kılavuz mekanizması sıkışması.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Pnömatik silindir hareketi kontrol (C2.184.0020)<br>2. Klips yay kuvveti kontrol<br>3. Hava hattı 4-6 bar stabil mi?<br>4. Plaka kılavuz sürgüsü temizle ve yağla<br>5. Solenoid valf (G2.335.038) kontrol</div>
+      <div class="fi-tip">⭐ Plaka tam oturmuyorsa register kaymasına neden olur. Mekanik kontrolü önce yap!</div>
+    </div>
+    <div class="fi" data-s="autoplate register paso kayması plaka eğri sm74">
+      <div class="fi-code">AUTOPLATE — Register Kayması</div>
+      <div class="fi-name">Her Plaka Değişiminde Register Kaçıyor</div>
+      <div class="fi-cause">Plaka kanalı (clamp) aşınmış veya referans pimi yerinden oynamış.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Plaka ön kenar referans pimlerini kontrol<br>2. Plaka kanal sıkma kuvveti eşit mi?<br>3. Heidelberg register sistemi kalibrasyonu<br>4. Plaka boyutu doğru mu? (Makineye göre)</div>
+    </div>
+  </div>
+</div>
+
+<div class="slb">MEKANİK — GENEL ARIZALAR</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m5')">
+    <div class="ac-ic ic-red">⚙️</div>
+    <div class="ac-title">Mekanik Genel Arızalar</div>
+    <span class="ac-badge b-red">MEKANİK</span>
+    <span class="ac-arr" id="a-m5">▶</span>
+  </div>
+  <div class="ac-body" id="m5">
+    <div class="fi" data-s="titreşim gürültü dişli rulman yatak mekanik">
+      <div class="fi-code">MEKANİK — Titreşim / Gürültü</div>
+      <div class="fi-name">Çalışırken Titreşim veya Anormal Gürültü</div>
+      <div class="fi-cause">Dişli aşınması, rulman hasarı veya silindir ayar bozukluğu.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Hangi hızda oluştuğunu not al (düşük/yüksek)<br>2. Baskı altında mı, boşta mı? Farkı belirle<br>3. Ana rulmanları kontrol (stethoscope ile)<br>4. Dişli yağlama: Otomatik yağlama sistemi çalışıyor mu?<br>5. Silindir basıncı ayarı (0.07-0.12 bar)</div>
+      <div class="fi-tip">⭐ Sorunların %30'u mekaniktir — elektriğe bakmadan önce mekanik kontrol yap!</div>
+    </div>
+    <div class="fi" data-s="yağlama otomatik sistem tıkanma pompa sm52 sm74">
+      <div class="fi-code">MEKANİK — Yağlama Sistemi</div>
+      <div class="fi-name">Otomatik Yağlama Çalışmıyor</div>
+      <div class="fi-cause">Yağlama pompası arızası veya yağ hattı tıkanması. Uzun vadede ciddi mekanik hasara yol açar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Yağ deposu seviyesi kontrol<br>2. Yağ pompası çıkış basıncı<br>3. Yağ hatları tıkanma kontrolü<br>4. Yağ filtresi değişimi (6 ayda bir)<br>5. Manuel yağlama noktalarını kontrol</div>
+      <div class="fi-warn">⚠️ Yağlama sistemi arızası fark edilmezse rulman ve dişli hasarı kaçınılmaz!</div>
+    </div>
+    <div class="fi" data-s="teslim istif delivery kağıt düzgün gelmiyor fırlatıcı">
+      <div class="fi-code">TESLİM — Delivery Arızası</div>
+      <div class="fi-name">Kağıtlar Düzgün İstiflenmiyor</div>
+      <div class="fi-cause">Teslim yavaşlatıcı (sheet slowdown) veya hava üfleyici (blower) ayarı bozuk.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Delivery blower hava akışı ve yönü ayarla<br>2. Yavaşlatıcı fırça/kauçuk aşınma kontrolü<br>3. Kılavuz sacları (guide plates) pozisyonu<br>4. Toz spreyi (powder) miktarı: Fazla toz istifi bozar<br>5. Kağıt gramajına göre hava ayarı yeniden yap</div>
+    </div>
+  </div>
+</div>
+</div>
+
 <!-- TEŞHİS -->
 <div class="sec" id="sec-teshis">
 <div class="slb">BELİRTİYE GÖRE TEŞHİS</div>
@@ -854,6 +1103,9 @@ body{
   <div class="bni bni-teshis" id="n-teshis" onclick="nav('teshis')">
     <div class="bni-ic">🎯</div><div class="bni-lb">TEŞHİS</div><div class="bni-dot"></div>
   </div>
+  <div class="bni bni-klasik" id="n-klasik" onclick="nav('klasik')">
+    <div class="bni-ic">🔩</div><div class="bni-lb">MEKANİK</div><div class="bni-dot"></div>
+  </div>
 </nav>
 
 <script>
@@ -947,7 +1199,7 @@ function clearSrch(){
   nav(currentSec);
 }
 
-const SECS=['err','hex','kart','qa','tip','teshis'];
+const SECS=['err','hex','kart','qa','tip','teshis','klasik'];
 let currentSec='err';
 function nav(s){
   currentSec=s;
