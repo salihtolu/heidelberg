@@ -1,0 +1,17 @@
+{
+  "name": "Heidelberg Pro Teşhis",
+  "short_name": "HD Pro Teşhis",
+  "description": "Heidelberg CP-Tronic Teşhis ve Arıza Rehberi — Salih Usta",
+  "start_url": "/heidelberg/heidelberg_pro_teshis_v3_ios.html",
+  "display": "standalone",
+  "background_color": "#04060e",
+  "theme_color": "#ffd600",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2991/2991148.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
