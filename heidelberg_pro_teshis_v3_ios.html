@@ -259,6 +259,10 @@ body{
 .bni-klasik.on .bni-ic{filter:drop-shadow(0 0 5px var(--blue));}
 .bni-klasik.on .bni-lb{color:var(--blue2);}
 .bni-klasik.on .bni-dot{background:var(--blue);}
+.tab-rehber.on{background:var(--green);box-shadow:0 0 8px var(--green),0 0 20px rgba(0,255,136,.4);}
+.bni-rehber.on .bni-ic{filter:drop-shadow(0 0 5px var(--green));}
+.bni-rehber.on .bni-lb{color:var(--green2);}
+.bni-rehber.on .bni-dot{background:var(--green);}
 .lbl-cyan{color:var(--cyan);}
 .lbl-green{color:var(--green);}
 .lbl-red{color:var(--red);}
@@ -299,6 +303,7 @@ body{
   <div class="tab tab-qa" onclick="nav('qa')"><span>🧪</span>40 Soru</div>
   <div class="tab tab-tip" onclick="nav('tip')"><span>⚡</span>Püf Noktası</div>
   <div class="tab tab-klasik" onclick="nav('klasik')"><span>🔩</span>Mekanik</div>
+  <div class="tab tab-rehber" onclick="nav('rehber')"><span>📋</span>Rehber</div>
   <div class="tab tab-teshis" onclick="nav('teshis')"><span>🎯</span>Teşhis</div>
 </div>
 
@@ -362,7 +367,22 @@ body{
       <div class="fi-fix">1. ZSKA +5V = 4.9-5.1V, ripple &lt;20mV<br>2. Lityum pil voltajı = min 3.0V<br>3. Kristal (8-16MHz) osiloskopta temiz sinüs<br>4. RAM ve EPROM çiplerini kontrol et</div>
       <div class="fi-warn">⚠️ Pil 2.8V altına düştüyse hafıza KAYBEDİLEBİLİR!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">DELTA (Δ) HATALARI</div>
@@ -410,7 +430,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. MID kart motor çıkış voltajları<br>2. Merdane encoder sinyali<br>3. Sigorta dirençleri ölç<br>4. Motor mekanik sıkışma</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">F KODLARI — KRİTİK GÜVENLİK</div>
@@ -452,7 +487,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. CAN-H/L enerji yokken = 60 Ohm<br>2. CAN sinyal: H=2.5-3.5V, L=1.5-2.5V<br>3. CAN transceiver kontrol<br>4. Shield topraklama tek noktadan</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">SM52 / SM74 ÖZEL HATA KODLARI</div>
@@ -481,7 +531,22 @@ body{
       <div class="fi-tip">⭐ EWK1 kartı sökme-takma ile geçici çözüm oluyorsa konnektör oksidasyonu — kontakları temizle.</div>
       <div class="fi-warn">⚠️ EWK1 değiştirilecekse parametre yedeklemesi şart!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="ac">
@@ -526,7 +591,22 @@ body{
       <div class="fi-fix">1. CP2000 kabinindeki BEK kartını kontrol et<br>2. BEK kart EPROM modülünü değiştir (register sorunu çözümü)<br>3. 15K37 rölesini kontrol et (48V DC bağlantısı)<br>4. STK kartı kontrol<br>5. SSK modülleri NTK voltajları ±0.7%</div>
       <div class="fi-tip">⭐ BEK kart EPROM değişimi register sorununu %80 çözüyor. Güvenilir kaynak: Heidelberg yetkili servis veya aftermarket EPROM tedarikçileri.</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e6">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e6')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e6" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e6" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e6')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e6')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">E KODLARI — UYARILAR</div>
@@ -550,7 +630,22 @@ body{
       <div class="fi-cause">SVM kartı kompresör çıkış basıncı düşük algıladı.</div>
       <div class="fi-fix">1. Kompresör basıncı = 2-6 bar<br>2. SVM kart triac/röle çıkışı<br>3. Hortum sızıntısı kontrol<br>4. Basınç sensörü 0.5-4.5V lineer mi?</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 </div>
 
@@ -608,7 +703,22 @@ body{
       <div class="fi-name">Neredeyse Tüm Kartlar Yok</div>
       <div class="fi-fix">CAN bus hat empedansı, NTM besleme, tüm konnektörler.</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_h1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('h1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_h1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_h1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('h1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('h1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 </div>
 
@@ -632,7 +742,22 @@ body{
       <div class="ki-tip">⭐ Pil değiştirirken ENERJİYİ KESME! SRAM verisi silinir.</div>
       <div class="ki-warn">⚠️ Pil 2.8V altı → EEPROM yedekle sonra değiştir!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k2')">
@@ -657,7 +782,22 @@ body{
       <div class="ki-desc">Mürekkep sistemi, kompresör ve blower kontrolü. Stop komutlarını SVM'ye iletir.</div>
       <div class="ki-val">Besleme: EWM1 ile aynı<br>Stop çıkış: 0V aktif<br>CAN segment: 60Ω</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k3')">
@@ -675,7 +815,22 @@ body{
       <div class="ki-val">+24V: 23-25V, ripple &lt;200mV<br>+5V: 4.90-5.10V, ripple &lt;50mV<br>+15V: 14.50-15.50V<br>-15V: -14.50 ~ -15.50V<br>Sigorta: 0Ω=sağlam / OL=yanmış<br>ESR: &lt;100mΩ</div>
       <div class="ki-tip">⭐ Sigortaları GÖZLE DEĞİL multimetre ile kontrol et!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k4')">
@@ -698,7 +853,22 @@ body{
       <div class="ki-val">Röle bobin: 24V DC<br>Kontaklar: &lt;0.5Ω iletimde<br>Switch girişi: 24V = kapalı</div>
       <div class="ki-warn">⚠️ Röle kontakları ark hasarı yapabilir!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k5')">
@@ -716,7 +886,22 @@ body{
       <div class="ki-val">Verici: 40kHz ±0.5kHz<br>Alıcı (kağıtsız): &gt;2V<br>Alıcı (tek kağıt): 0.5-2V<br>Alıcı (çift kağıt): &lt;0.5V<br>Besleme: 24V, ripple &lt;100mV</div>
       <div class="ki-tip">⭐ Yanlış alarm → Önce teach-in yenile. Sonra pot temizliği.</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k6')">
@@ -732,7 +917,22 @@ body{
       <div class="ki-val">Motor PWM: 0-24V<br>Limit switch: 24V aktif<br>Pot konum: 0-5V<br>Darlington Vce: &lt;0.5V</div>
       <div class="ki-tip">Tabla sarsıntılı: Darlington transistör veya H-köprü bozuk. PWM sinyali osiloskopla kontrol.</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k6">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k6')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k6" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k6" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k6')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k6')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k7')">
@@ -748,7 +948,22 @@ body{
       <div class="ki-val">Motor çıkış: ±24V PWM<br>Encoder: 0-5V, 90° faz<br>Sigorta direnç: 0.1-1Ω<br>H-köprü Vce: &lt;0.5V</div>
       <div class="ki-warn">⚠️ Sigorta dirençleri görsel sağlam görünebilir — mutlaka ölç!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k7">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k7')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k7" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k7" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k7')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k7')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k8')">
@@ -764,7 +979,22 @@ body{
       <div class="ki-val">Çıkış: 220V AC<br>Triac iletimde: 1-2V düşme<br>Basınç sensörü: 0.5-4.5V<br>Kompresör: 2-6 bar</div>
       <div class="ki-tip">Kompresör durmuyor: EWM2'den stop sinyali SVM'ye ulaşmıyor. Sinyal hattını ölç.</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k8">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k8')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k8" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k8" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k8')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k8')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 <div class="ac">
   <div class="ac-hdr" onclick="tog('k9')">
@@ -780,7 +1010,22 @@ body{
       <div class="ki-val">NTC 25°C: 10-47kΩ<br>NTC 100°C: 1-5kΩ<br>Fan PWM: %20-100<br>Heater: 220V AC triac</div>
       <div class="ki-warn">⚠️ Termal pasta kuruyorsa soğukken overheat hatası verir!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k9">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k9')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k9" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k9" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k9')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k9')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 </div>
 
@@ -870,7 +1115,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. Yan lay motor encoder sinyali kontrol<br>2. Yan lay kart (SLM) motor PWM çıkışı ölç<br>3. Referans pot temizle (oksidasyon)<br>4. Mekanik tıkanma var mı kontrol<br>5. Sıfırlama: CP-Tronic'ten yan lay kalibrasyonu</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">ALCOLOR ISLAK SISTEM ARIZALARI</div>
@@ -905,7 +1165,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. Form merdanesi baskı ayarı: Heidelberg şerit testi (0.5mm kağıt şerit)<br>2. Merdane sertliği: Shore 25-30A<br>3. Merdane yüzeyi gözenekleri temizle<br>4. Pan merdanesi (duktor) hız oranı ayarı</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">GTO — ÖZEL ARIZALAR</div>
@@ -940,7 +1215,22 @@ body{
       <div class="fi-fix">1. Blanket kalınlığı: 1.95mm standard<br>2. Packing toplam: Blanket dahil 3.25mm (GTO)<br>3. Blanket torku: Eşit ve dengeli sıkılmalı<br>4. Blanket yüzeyini solventle sil, şişme varsa değiştir<br>5. Alt dolgu kağıt (packing sheet) sayısını kontrol</div>
       <div class="fi-warn">⚠️ Blanket fazla şişmişse silindir dişlileri zarar görebilir!</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">AUTOPLATE — OTOMATİK PLAKA SİSTEMİ</div>
@@ -967,7 +1257,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. Plaka ön kenar referans pimlerini kontrol<br>2. Plaka kanal sıkma kuvveti eşit mi?<br>3. Heidelberg register sistemi kalibrasyonu<br>4. Plaka boyutu doğru mu? (Makineye göre)</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 
 <div class="slb">MEKANİK — GENEL ARIZALAR</div>
@@ -1002,7 +1307,22 @@ body{
       <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
       <div class="fi-fix">1. Delivery blower hava akışı ve yönü ayarla<br>2. Yavaşlatıcı fırça/kauçuk aşınma kontrolü<br>3. Kılavuz sacları (guide plates) pozisyonu<br>4. Toz spreyi (powder) miktarı: Fazla toz istifi bozar<br>5. Kağıt gramajına göre hava ayarı yeniden yap</div>
     </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
   </div>
+</div>
 </div>
 </div>
 
@@ -1081,6 +1401,77 @@ body{
 </div>
 </div>
 
+
+<!-- GITHUB REHBERİ -->
+<div class="sec" id="sec-rehber">
+<div class="slb">📋 GITHUB GÜNCELLEME REHBERİ</div>
+<div class="tc">
+  <div class="tc-title" style="color:var(--amber2);font-size:15px;">🖥️ Programı Nasıl Güncellerim?</div>
+  <div class="tc-body" style="color:var(--t2);font-size:13px;line-height:1.8;">
+    Bu rehberi bir yere not al. Program güncellemek istediğinde bu adımları takip et.
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--cyan);">
+  <div class="tc-title">1️⃣ GitHub'a Giriş Yap</div>
+  <div class="tc-body">
+    Bilgisayardan <b>github.com</b> adresine git.<br>
+    Sağ üstte profil resmine tıkla → <em>Sign in</em> ile giriş yap.<br>
+    Kullanıcı adın: <b>salihtolu</b>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--cyan);">
+  <div class="tc-title">2️⃣ Depoya Git</div>
+  <div class="tc-body">
+    Sol tarafta <b>salihtolu/heidelberg</b> yazan depoya tıkla.<br>
+    Veya doğrudan adres çubuğuna yaz:<br>
+    <em>github.com/salihtolu/heidelberg</em>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--amber);">
+  <div class="tc-title">3️⃣ Dosyayı Sil</div>
+  <div class="tc-body">
+    Dosya listesinde <b>heidelberg_pro_teshis_v3_ios.html</b> dosyasına tıkla.<br>
+    Sağ üstte <b>🗑️ çöp kutusu ikonu</b>na tıkla.<br>
+    Sayfanın altında <b>"Commit changes"</b> butonuna bas.<br>
+    <s>Eski dosya silindi.</s>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--green);">
+  <div class="tc-title">4️⃣ Yeni Dosyayı Yükle</div>
+  <div class="tc-body">
+    Depo ana sayfasında <b>"Add file"</b> butonuna tıkla.<br>
+    <em>"Upload files"</em> seç.<br>
+    Yeni <b>heidelberg_pro_teshis_v3_ios.html</b> dosyasını sürükle-bırak.<br>
+    Sayfanın altında <b>"Commit changes"</b> butonuna bas.
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--green);">
+  <div class="tc-title">5️⃣ Güncellemeyi Telefondan Gör</div>
+  <div class="tc-body">
+    <b>2-3 dakika bekle.</b><br>
+    Telefonda programı aç.<br>
+    Sayfayı <em>aşağı çekip bırak</em> (yenile hareketi) yap.<br>
+    Güncelleme otomatik yüklenir! ✅
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--red);background:rgba(255,34,68,.05);">
+  <div class="tc-title" style="color:var(--red2);">⚠️ ÖNEMLİ NOTLAR</div>
+  <div class="tc-body">
+    <s>Dosya adını değiştirme!</s> Hep aynı isim olmalı.<br>
+    <s>Depo adını değiştirme!</s> heidelberg kalmalı.<br>
+    <em>Telefondaki notların silinmez</em> — onlar telefonda saklanır.<br>
+    Program linki hep aynı kalır:<br>
+    <b>salihtolu.github.io/heidelberg/heidelberg_pro_teshis_v3_ios.html</b>
+  </div>
+</div>
+</div>
+
 </div><!-- /content -->
 
 <!-- BOTTOM NAV -->
@@ -1105,6 +1496,9 @@ body{
   </div>
   <div class="bni bni-klasik" id="n-klasik" onclick="nav('klasik')">
     <div class="bni-ic">🔩</div><div class="bni-lb">MEKANİK</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-rehber" id="n-rehber" onclick="nav('rehber')">
+    <div class="bni-ic">📋</div><div class="bni-lb">REHBER</div><div class="bni-dot"></div>
   </div>
 </nav>
 
@@ -1190,7 +1584,7 @@ function doSearch(q){
   c.innerHTML=res.map(r=>`<div class="sr"><div class="sr-code">${r.code}</div><div class="sr-name">${r.name}</div><div class="sr-fix">${r.fix.slice(0,150)}...</div></div>`).join('');
 }
 function showOnlySearch(){
-  ['err','hex','kart','qa','tip','teshis'].forEach(s=>document.getElementById('sec-'+s).classList.remove('on'));
+  ['err','hex','kart','qa','tip','teshis','klasik','rehber'].forEach(s=>document.getElementById('sec-'+s).classList.remove('on'));
   document.getElementById('sec-search').classList.add('on');
 }
 function clearSrch(){
@@ -1199,7 +1593,7 @@ function clearSrch(){
   nav(currentSec);
 }
 
-const SECS=['err','hex','kart','qa','tip','teshis','klasik'];
+const SECS=['err','hex','kart','qa','tip','teshis','klasik','rehber'];
 let currentSec='err';
 function nav(s){
   currentSec=s;
@@ -1216,6 +1610,7 @@ function nav(s){
 function tog(id){
   document.getElementById(id).classList.toggle('o');
   document.getElementById('a-'+id).classList.toggle('o');
+  if(document.getElementById(id).classList.contains('o')) renderNotes(id);
 }
 function togTp(id){
   document.getElementById(id).classList.toggle('o');
@@ -1224,6 +1619,68 @@ function togTp(id){
 function togQA(i){
   document.getElementById('qa-b'+i).classList.toggle('o');
   document.getElementById('qa-a'+i).classList.toggle('o');
+}
+
+// ─── NOT SİSTEMİ ───
+function getNotes(kartId){
+  try{ return JSON.parse(localStorage.getItem('notes_'+kartId)||'[]'); }
+  catch(e){ return []; }
+}
+function saveNotes(kartId,notes){
+  localStorage.setItem('notes_'+kartId,JSON.stringify(notes));
+}
+function escHtml(t){
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function renderNotes(kartId){
+  const box=document.getElementById('notbox_'+kartId);
+  if(!box) return;
+  const notes=getNotes(kartId);
+  if(!notes.length){
+    box.innerHTML='<div style="color:var(--t3);font-size:11px;padding:4px 0;">Henüz not eklenmedi.</div>';
+    return;
+  }
+  box.innerHTML=notes.map((n,i)=>`
+    <div style="background:var(--s3);border:1px solid var(--b2);border-radius:10px;padding:10px 12px;margin-bottom:8px;">
+      <div style="font-size:10px;color:var(--amber2);font-weight:700;margin-bottom:4px;">📝 ${n.tarih}</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.5;white-space:pre-wrap;">${escHtml(n.metin)}</div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button onclick="notDuzenle('${kartId}',${i})" style="font-size:11px;padding:4px 10px;border-radius:7px;border:1px solid var(--cyan);background:transparent;color:var(--cyan2);cursor:pointer;">✏️ Düzenle</button>
+        <button onclick="notSil('${kartId}',${i})" style="font-size:11px;padding:4px 10px;border-radius:7px;border:1px solid var(--red);background:transparent;color:var(--red2);cursor:pointer;">🗑️ Sil</button>
+      </div>
+    </div>`).join('');
+}
+function notEkleAc(kartId){
+  const f=document.getElementById('notform_'+kartId);
+  if(f) f.style.display=f.style.display==='none'?'block':'none';
+}
+function notKaydet(kartId){
+  const ta=document.getElementById('notyaz_'+kartId);
+  const metin=ta.value.trim();
+  if(!metin){alert('Lütfen bir şeyler yaz!');return;}
+  const notes=getNotes(kartId);
+  const tarih=new Date().toLocaleString('tr-TR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  notes.push({metin,tarih});
+  saveNotes(kartId,notes);
+  ta.value='';
+  document.getElementById('notform_'+kartId).style.display='none';
+  renderNotes(kartId);
+}
+function notSil(kartId,idx){
+  if(!confirm('Bu notu silmek istiyor musun?')) return;
+  const notes=getNotes(kartId);
+  notes.splice(idx,1);
+  saveNotes(kartId,notes);
+  renderNotes(kartId);
+}
+function notDuzenle(kartId,idx){
+  const notes=getNotes(kartId);
+  const yeni=prompt('Notu düzenle:',notes[idx].metin);
+  if(yeni===null) return;
+  notes[idx].metin=yeni.trim();
+  notes[idx].tarih+=' (düzenlendi)';
+  saveNotes(kartId,notes);
+  renderNotes(kartId);
 }
 </script>
 </body>
