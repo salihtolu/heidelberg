@@ -1,4 +1,3 @@
-
 const CACHE = 'hd-pro-v4';
 const ANA_DOSYA = '/heidelberg/heidelberg_pro_teshis_v3_ios.html';
 
