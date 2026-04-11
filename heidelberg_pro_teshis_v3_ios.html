@@ -1,1 +1,1714 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="HD Pro Teşhis">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSIjMGQxNDI2Ii8+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHJ4PSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iMjAiIHkxPSIzOCIgeDI9IjE4MCIgeTI9IjM4IiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC40Ii8+CiAgPGVsbGlwc2UgY3g9IjEwMCIgY3k9IjgyIiByeD0iNTIiIHJ5PSIxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8cmVjdCB4PSI0OCIgeT0iODIiIHdpZHRoPSIxMDQiIGhlaWdodD0iMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iODIiIHgyPSI3NCIgeTI9IjExOCIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjgyIiB4Mj0iMTAwIiB5Mj0iMTE4IiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMS4yIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMTI2IiB5MT0iODIiIHgyPSIxMjYiIHkyPSIxMTgiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9IjAuMyIvPgogIDxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxMTgiIHJ4PSI1MiIgcnk9IjE2IiBmaWxsPSIjZmZkNjAwIiBvcGFjaXR5PSIwLjA4Ii8+CiAgPGVsbGlwc2UgY3g9IjEwMCIgY3k9IjExOCIgcng9IjUyIiByeT0iMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9IjIwIiB5MT0iMTQwIiB4Mj0iMTgwIiB5Mj0iMTQwIiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTAwIiB5PSIxNjMiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZkNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMiI+SEVJREVMQkVSRzwvdGV4dD4KICA8dGV4dCB4PSIxMDAiIHk9IjE4MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwMGY1ZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzIj5TQUzEsEg8L3RleHQ+Cjwvc3ZnPg==">
+<link rel="manifest" href="/heidelberg/manifest.json">
+<link rel="shortcut icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj4KICA8cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgcng9IjQwIiBmaWxsPSIjMGQxNDI2Ii8+CiAgPHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHJ4PSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjQiLz4KICA8bGluZSB4MT0iMjAiIHkxPSIzOCIgeDI9IjE4MCIgeTI9IjM4IiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC40Ii8+CiAgPGVsbGlwc2UgY3g9IjEwMCIgY3k9IjgyIiByeD0iNTIiIHJ5PSIxNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8cmVjdCB4PSI0OCIgeT0iODIiIHdpZHRoPSIxMDQiIGhlaWdodD0iMzYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9Ijc0IiB5MT0iODIiIHgyPSI3NCIgeTI9IjExOCIgc3Ryb2tlPSIjZmZkNjAwIiBzdHJva2Utd2lkdGg9IjEuMiIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjgyIiB4Mj0iMTAwIiB5Mj0iMTE4IiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMS4yIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMTI2IiB5MT0iODIiIHgyPSIxMjYiIHkyPSIxMTgiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9IjAuMyIvPgogIDxlbGxpcHNlIGN4PSIxMDAiIGN5PSIxMTgiIHJ4PSI1MiIgcnk9IjE2IiBmaWxsPSIjZmZkNjAwIiBvcGFjaXR5PSIwLjA4Ii8+CiAgPGVsbGlwc2UgY3g9IjEwMCIgY3k9IjExOCIgcng9IjUyIiByeT0iMTYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZDYwMCIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGxpbmUgeDE9IjIwIiB5MT0iMTQwIiB4Mj0iMTgwIiB5Mj0iMTQwIiBzdHJva2U9IiNmZmQ2MDAiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMTAwIiB5PSIxNjMiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iOTAwIiBmaWxsPSIjZmZkNjAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMiI+SEVJREVMQkVSRzwvdGV4dD4KICA8dGV4dCB4PSIxMDAiIHk9IjE4MiIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMwMGY1ZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzIj5TQUzEsEg8L3RleHQ+Cjwvc3ZnPg==">
+<title>Heidelberg Pro Teşhis — Salih Usta V3</title>
+<style>
+:root{
+--bg:#04060e;--s1:#080d1a;--s2:#0d1426;--s3:#131d34;
+--b1:#1a2a48;--b2:#243860;
+--amber:#ffd600;--amber2:#ffe84d;--amber3:#fff5a0;
+--cyan:#00f5ff;--cyan2:#80faff;
+--green:#00ff88;--green2:#aaffcc;
+--red:#ff2244;--red2:#ff8899;
+--orange:#ff6600;--orange2:#ffaa55;
+--purple:#cc44ff;--purple2:#ee99ff;
+--blue:#0088ff;--blue2:#66bbff;
+--pink:#ff44aa;--pink2:#ffaadd;
+--text:#e8f4ff;--t2:#90aad0;--t3:#4a6090;--t4:#2a3a58;
+--hdr-h:56px;
+--srch-h:52px;
+--tab-h:50px;
+--nav-h:70px;
+--top-total:158px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html{background:var(--bg);}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,'SF Pro Display',sans-serif;
+  min-height:100vh;
+  overscroll-behavior:none;
+  /* top padding = header+search+tabs */
+  padding-top:var(--top-total);
+  padding-bottom:calc(var(--nav-h) + 10px);
+}
+
+/* ─── FIXED HEADER ─── */
+.hdr{
+  position:fixed;top:0;left:0;right:0;
+  height:var(--hdr-h);
+  background:linear-gradient(180deg,#060d1e 0%,#04060e 100%);
+  border-bottom:1px solid var(--b1);
+  z-index:300;
+  overflow:hidden;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+.hdr::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--amber),var(--cyan),transparent);animation:hdrline 3s linear infinite;}
+.hdr::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% -20%,rgba(0,245,255,.06) 0%,transparent 60%);pointer-events:none;}
+@keyframes hdrline{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.hdr-row{display:flex;align-items:center;gap:10px;padding:0 14px;height:100%;position:relative;z-index:1;}
+.hdr-logo{width:38px;height:38px;background:linear-gradient(135deg,#ff6600,#ffd600);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;animation:logopulse 3s ease-in-out infinite;}
+@keyframes logopulse{0%,100%{box-shadow:0 0 12px rgba(255,214,0,.4),0 0 24px rgba(255,102,0,.2)}50%{box-shadow:0 0 20px rgba(255,214,0,.8),0 0 40px rgba(255,102,0,.4)}}
+.hdr-title{font-size:16px;font-weight:900;color:var(--amber2);letter-spacing:.5px;text-shadow:0 0 8px rgba(255,214,0,.6);}
+.hdr-sub{font-size:9px;color:var(--t2);margin-top:1px;}
+.live-dot{display:inline-block;width:5px;height:5px;background:var(--green);border-radius:50%;margin-right:4px;box-shadow:0 0 6px var(--green);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* ─── FIXED SEARCH ─── */
+.srch-bar{
+  position:fixed;
+  top:var(--hdr-h);
+  left:0;right:0;
+  height:var(--srch-h);
+  padding:6px 12px;
+  background:var(--s1);
+  border-bottom:1px solid var(--b1);
+  z-index:299;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+.srch-inner{display:flex;align-items:center;gap:8px;background:var(--bg);border:1.5px solid var(--b1);border-radius:12px;padding:8px 12px;transition:all .2s;height:100%;}
+.srch-inner:focus-within{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(0,245,255,.12);}
+.srch-inner input{background:none;border:none;outline:none;color:var(--text);font-size:14px;width:100%;}
+.srch-inner input::placeholder{color:var(--t3);}
+.srch-ic{font-size:15px;color:var(--cyan);}
+.srch-clr{font-size:16px;color:var(--t3);cursor:pointer;display:none;padding:0 2px;}
+
+/* ─── FIXED TABBAR ─── */
+.tabbar{
+  position:fixed;
+  top:calc(var(--hdr-h) + var(--srch-h));
+  left:0;right:0;
+  height:var(--tab-h);
+  display:flex;
+  overflow-x:auto;
+  padding:8px 10px;
+  gap:6px;
+  background:var(--s1);
+  border-bottom:1px solid var(--b1);
+  scrollbar-width:none;
+  z-index:298;
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+  -webkit-overflow-scrolling:touch;
+}
+.tabbar::-webkit-scrollbar{display:none;}
+.tab{flex-shrink:0;padding:5px 10px;border-radius:16px;font-size:11px;font-weight:800;border:1.5px solid var(--b1);color:var(--t2);background:rgba(255,255,255,.03);cursor:pointer;white-space:nowrap;transition:all .2s;display:flex;align-items:center;gap:4px;}
+.tab.on{color:#000!important;border-color:transparent;font-weight:900;}
+.tab-err.on{background:var(--red);box-shadow:0 0 8px var(--red),0 0 20px rgba(255,34,68,.4);}
+.tab-hex.on{background:var(--purple);box-shadow:0 0 8px var(--purple),0 0 20px rgba(204,68,255,.4);}
+.tab-kart.on{background:var(--cyan);box-shadow:0 0 8px var(--cyan),0 0 20px rgba(0,245,255,.4);}
+.tab-qa.on{background:var(--green);box-shadow:0 0 8px var(--green),0 0 20px rgba(0,255,136,.4);}
+.tab-tip.on{background:var(--amber);box-shadow:0 0 8px var(--amber),0 0 20px rgba(255,214,0,.4);}
+.tab-teshis.on{background:var(--orange);box-shadow:0 0 8px var(--orange),0 0 20px rgba(255,102,0,.4);}
+
+/* ─── CONTENT ─── */
+.content{padding:14px 14px 10px;}
+.sec{display:none;}
+.sec.on{display:block;}
+.slb{font-size:10px;font-weight:800;color:var(--b2);letter-spacing:2px;text-transform:uppercase;margin:18px 0 8px 2px;border-left:2px solid var(--b2);padding-left:8px;}
+
+/* ─── ACCORDION ─── */
+.ac{background:var(--s2);border:1px solid var(--b1);border-radius:14px;margin-bottom:10px;overflow:hidden;}
+.ac-hdr{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none;}
+.ac-ic{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.ac-title{flex:1;font-size:13px;font-weight:700;color:var(--text);}
+.ac-badge{font-size:9px;font-weight:800;padding:3px 8px;border-radius:7px;white-space:nowrap;}
+.ac-arr{color:var(--t3);font-size:11px;margin-left:4px;transition:transform .25s;flex-shrink:0;}
+.ac-arr.o{transform:rotate(90deg);}
+.ac-body{display:none;border-top:1px solid var(--b1);}
+.ac-body.o{display:block;}
+
+/* ─── FAULT ITEM ─── */
+.fi{padding:13px 14px;border-bottom:1px solid var(--b1);}
+.fi:last-child{border-bottom:none;}
+.fi-code{font-size:16px;font-weight:800;color:var(--amber2);font-family:'SF Mono',monospace;letter-spacing:.5px;margin-bottom:3px;text-shadow:0 0 10px rgba(255,232,77,.5);}
+.fi-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.fi-cause{font-size:12px;color:var(--t2);line-height:1.55;margin-bottom:8px;}
+.fi-lbl{font-size:9px;font-weight:800;letter-spacing:1px;margin-bottom:4px;margin-top:10px;}
+.fi-fix{font-size:12px;color:var(--green2);line-height:1.6;}
+.fi-tip{font-size:11px;color:var(--orange2);line-height:1.55;margin-top:8px;padding:8px 10px;background:rgba(255,140,0,.08);border-radius:9px;border-left:2.5px solid var(--orange);}
+.fi-expert{font-size:11px;color:var(--cyan2);line-height:1.55;margin-top:6px;padding:8px 10px;background:rgba(0,212,255,.06);border-radius:9px;border-left:2.5px solid var(--cyan);}
+.fi-warn{font-size:11px;color:var(--red2);line-height:1.55;margin-top:6px;padding:8px 10px;background:rgba(255,64,64,.07);border-radius:9px;border-left:2.5px solid var(--red);}
+
+/* ─── KART ITEM ─── */
+.ki{padding:13px 14px;border-bottom:1px solid var(--b1);}
+.ki:last-child{border-bottom:none;}
+.ki-name{font-size:15px;font-weight:800;color:var(--amber2);margin-bottom:2px;text-shadow:0 0 10px rgba(255,232,77,.4);}
+.ki-role{font-size:11px;font-weight:700;color:var(--cyan);letter-spacing:.3px;margin-bottom:6px;text-shadow:0 0 8px rgba(0,245,255,.4);}
+.ki-desc{font-size:12px;color:var(--t2);line-height:1.6;margin-bottom:8px;}
+.ki-lbl{font-size:9px;font-weight:800;letter-spacing:1px;margin-bottom:4px;margin-top:10px;}
+.ki-val{font-size:12px;color:var(--green2);line-height:1.7;font-family:'SF Mono',monospace;}
+.ki-tip{font-size:11px;color:var(--orange2);line-height:1.55;margin-top:8px;padding:8px 10px;background:rgba(255,140,0,.08);border-radius:9px;border-left:2.5px solid var(--orange);}
+.ki-warn{font-size:11px;color:var(--red2);line-height:1.55;margin-top:6px;padding:8px 10px;background:rgba(255,64,64,.07);border-radius:9px;border-left:2.5px solid var(--red);}
+
+/* ─── QA ─── */
+.qa{background:var(--s2);border:1px solid var(--b1);border-radius:13px;margin-bottom:8px;overflow:hidden;}
+.qa-q{padding:11px 13px;cursor:pointer;display:flex;align-items:flex-start;gap:9px;}
+.qa-num{width:24px;height:24px;background:var(--amber);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#000;flex-shrink:0;margin-top:1px;box-shadow:0 0 6px rgba(255,214,0,.5);}
+.qa-qtxt{font-size:12px;font-weight:700;color:var(--text);flex:1;line-height:1.45;}
+.qa-arr{color:var(--t3);font-size:11px;transition:transform .2s;flex-shrink:0;margin-top:3px;}
+.qa-arr.o{transform:rotate(90deg);}
+.qa-a{display:none;padding:0 13px 12px 46px;border-top:1px solid var(--b1);}
+.qa-a.o{display:block;}
+.qa-atxt{font-size:12px;color:var(--t2);line-height:1.65;padding-top:10px;}
+.qa-atxt b{color:var(--cyan2);}
+.qa-atxt em{color:var(--orange2);font-style:normal;}
+.qa-atxt s{color:var(--green2);text-decoration:none;font-weight:700;}
+
+/* ─── TIP CARD ─── */
+.tc{background:var(--s2);border:1px solid var(--b1);border-radius:13px;padding:12px 14px;margin-bottom:8px;}
+.tc-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:7px;}
+.tc-body{font-size:12px;color:var(--t2);line-height:1.65;}
+.tc-body b{color:var(--amber2);}
+.tc-body em{color:var(--green2);font-style:normal;}
+.tc-body s{color:var(--red2);text-decoration:none;}
+.tc-body u{color:var(--cyan2);text-decoration:none;}
+
+/* ─── TESHIS ─── */
+.tp{background:var(--s2);border:1px solid var(--b1);border-radius:13px;margin-bottom:8px;overflow:hidden;}
+.tp-hdr{padding:11px 14px;display:flex;align-items:center;gap:9px;cursor:pointer;}
+.tp-ic{font-size:18px;}
+.tp-title{font-size:13px;font-weight:700;flex:1;color:var(--text);}
+.tp-arr{color:var(--t3);font-size:11px;transition:transform .2s;}
+.tp-arr.o{transform:rotate(90deg);}
+.tp-body{display:none;padding:0 14px 12px;border-top:1px solid var(--b1);}
+.tp-body.o{display:block;}
+.step{display:flex;gap:9px;padding:8px 0;border-bottom:1px solid var(--b1);}
+.step:last-child{border-bottom:none;}
+.step-n{width:22px;height:22px;border-radius:50%;background:var(--s3);border:1.5px solid var(--b2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--amber);flex-shrink:0;margin-top:2px;}
+.step-txt{font-size:12px;color:var(--t2);line-height:1.55;flex:1;}
+.step-txt b{color:var(--amber2);}
+.step-txt em{color:var(--green2);font-style:normal;}
+.step-txt s{color:var(--red2);text-decoration:none;}
+
+/* ─── SEARCH RESULT ─── */
+.sr{background:var(--s2);border:1.5px solid var(--amber);border-radius:13px;padding:11px 13px;margin-bottom:8px;}
+.sr-code{font-size:15px;font-weight:800;color:var(--amber2);font-family:monospace;}
+.sr-name{font-size:12px;font-weight:700;color:var(--text);margin:3px 0;}
+.sr-fix{font-size:11px;color:var(--green2);line-height:1.5;}
+.no-res{text-align:center;padding:40px 20px;color:var(--t3);}
+.no-res-ic{font-size:32px;margin-bottom:10px;}
+.no-res-txt{font-size:14px;}
+
+/* ─── BADGE COLORS ─── */
+.b-red{background:rgba(255,34,68,.12);color:var(--red2);border:1px solid rgba(255,34,68,.3);}
+.b-amber{background:rgba(255,214,0,.12);color:var(--amber2);border:1px solid rgba(255,214,0,.25);}
+.b-green{background:rgba(0,255,136,.1);color:var(--green2);border:1px solid rgba(0,255,136,.25);}
+.b-cyan{background:rgba(0,245,255,.1);color:var(--cyan2);border:1px solid rgba(0,245,255,.25);}
+.b-purple{background:rgba(204,68,255,.12);color:var(--purple2);border:1px solid rgba(204,68,255,.3);}
+.b-blue{background:rgba(0,136,255,.12);color:var(--blue2);border:1px solid rgba(0,136,255,.25);}
+
+/* ─── ICON BACKGROUNDS ─── */
+.ic-red{background:rgba(255,34,68,.15);box-shadow:inset 0 0 10px rgba(255,34,68,.2);}
+.ic-amber{background:rgba(255,214,0,.12);box-shadow:inset 0 0 10px rgba(255,214,0,.15);}
+.ic-green{background:rgba(0,255,136,.1);box-shadow:inset 0 0 10px rgba(0,255,136,.15);}
+.ic-cyan{background:rgba(0,245,255,.1);box-shadow:inset 0 0 10px rgba(0,245,255,.15);}
+.ic-purple{background:rgba(204,68,255,.12);box-shadow:inset 0 0 10px rgba(204,68,255,.2);}
+.ic-blue{background:rgba(0,136,255,.12);box-shadow:inset 0 0 10px rgba(0,136,255,.2);}
+.ic-orange{background:rgba(255,102,0,.15);box-shadow:inset 0 0 10px rgba(255,102,0,.2);}
+
+/* ─── BOTTOM NAV ─── */
+.bnav{
+  position:fixed;bottom:0;left:0;right:0;
+  height:var(--nav-h);
+  background:rgba(4,6,14,.97);
+  border-top:1px solid var(--b1);
+  padding:4px 0 16px;
+  display:flex;
+  z-index:999;
+  -webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+}
+.bnav::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--b2),transparent);}
+.bni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;cursor:pointer;padding:4px 0;transition:all .2s;}
+.bni-ic{font-size:20px;line-height:1;transition:all .2s;filter:grayscale(.6) brightness(.6);}
+.bni-lb{font-size:8px;font-weight:700;color:var(--t3);letter-spacing:.3px;transition:all .2s;}
+.bni-dot{width:3px;height:3px;border-radius:50%;margin:1px auto 0;opacity:0;transition:opacity .2s;}
+.bni.on .bni-ic{filter:none;transform:scale(1.1);}
+.bni.on .bni-dot{opacity:1;}
+.bni-err.on .bni-ic{filter:drop-shadow(0 0 5px var(--red));}
+.bni-err.on .bni-lb{color:var(--red2);}
+.bni-err.on .bni-dot{background:var(--red);box-shadow:0 0 6px var(--red);}
+.bni-hex.on .bni-ic{filter:drop-shadow(0 0 5px var(--purple));}
+.bni-hex.on .bni-lb{color:var(--purple2);}
+.bni-hex.on .bni-dot{background:var(--purple);}
+.bni-kart.on .bni-ic{filter:drop-shadow(0 0 5px var(--cyan));}
+.bni-kart.on .bni-lb{color:var(--cyan2);}
+.bni-kart.on .bni-dot{background:var(--cyan);}
+.bni-qa.on .bni-ic{filter:drop-shadow(0 0 5px var(--green));}
+.bni-qa.on .bni-lb{color:var(--green2);}
+.bni-qa.on .bni-dot{background:var(--green);}
+.bni-tip.on .bni-ic{filter:drop-shadow(0 0 5px var(--amber));}
+.bni-tip.on .bni-lb{color:var(--amber2);}
+.bni-tip.on .bni-dot{background:var(--amber);}
+.bni-teshis.on .bni-ic{filter:drop-shadow(0 0 5px var(--orange));}
+.bni-teshis.on .bni-lb{color:var(--orange2);}
+.bni-teshis.on .bni-dot{background:var(--orange);}
+
+.tab-klasik.on{background:var(--blue);box-shadow:0 0 8px var(--blue),0 0 20px rgba(0,136,255,.4);}
+.bni-klasik.on .bni-ic{filter:drop-shadow(0 0 5px var(--blue));}
+.bni-klasik.on .bni-lb{color:var(--blue2);}
+.bni-klasik.on .bni-dot{background:var(--blue);}
+.tab-rehber.on{background:var(--green);box-shadow:0 0 8px var(--green),0 0 20px rgba(0,255,136,.4);}
+.bni-rehber.on .bni-ic{filter:drop-shadow(0 0 5px var(--green));}
+.bni-rehber.on .bni-lb{color:var(--green2);}
+.bni-rehber.on .bni-dot{background:var(--green);}
+.lbl-cyan{color:var(--cyan);}
+.lbl-green{color:var(--green);}
+.lbl-red{color:var(--red);}
+.lbl-amber{color:var(--amber);}
+</style>
+</head>
+<body>
+
+<!-- FIXED HEADER -->
+<header class="hdr">
+  <div class="hdr-row">
+    <div class="hdr-logo">🖨️</div>
+    <div style="flex:1;">
+      <div class="hdr-title">HEİDELBERG PRO TEŞHİS</div>
+      <div class="hdr-sub"><span class="live-dot"></span>SM52 · SM74 · CD74 · GTO · SORMZ — Salih Usta V3</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:9px;color:var(--cyan);font-weight:700;letter-spacing:1px;">SİSTEM AKTİF</div>
+      <div style="font-size:9px;color:var(--t3);margin-top:1px;">v3.0 | 1996+</div>
+    </div>
+  </div>
+</header>
+
+<!-- FIXED SEARCH -->
+<div class="srch-bar">
+  <div class="srch-inner">
+    <span class="srch-ic">🔍</span>
+    <input type="search" id="SI" placeholder="Kod, belirti veya kart ara..." oninput="doSearch(this.value)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <span class="srch-clr" id="SC" onclick="clearSrch()">✕</span>
+  </div>
+</div>
+
+<!-- FIXED TABBAR -->
+<div class="tabbar" id="TB">
+  <div class="tab tab-err on" onclick="nav('err')"><span>🚨</span>Hata Kodları</div>
+  <div class="tab tab-hex" onclick="nav('hex')"><span>⬡</span>HEX / KID</div>
+  <div class="tab tab-kart" onclick="nav('kart')"><span>🔲</span>PCB Kartlar</div>
+  <div class="tab tab-qa" onclick="nav('qa')"><span>🧪</span>40 Soru</div>
+  <div class="tab tab-tip" onclick="nav('tip')"><span>⚡</span>Püf Noktası</div>
+  <div class="tab tab-klasik" onclick="nav('klasik')"><span>🔩</span>Mekanik</div>
+  <div class="tab tab-rehber" onclick="nav('rehber')"><span>📋</span>Rehber</div>
+  <div class="tab tab-teshis" onclick="nav('teshis')"><span>🎯</span>Teşhis</div>
+</div>
+
+<!-- SCROLLABLE CONTENT -->
+<div class="content">
+
+<!-- SEARCH RESULTS -->
+<div class="sec" id="sec-search">
+  <div class="slb">Arama Sonuçları</div>
+  <div id="SR"></div>
+</div>
+
+<!-- HATA KODLARI -->
+<div class="sec on" id="sec-err">
+<div class="slb">KRİTİK — KID / KİMLİK HATALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e1')">
+    <div class="ac-ic ic-red">🔑</div>
+    <div class="ac-title">KID — Kart Kimlik Hataları</div>
+    <span class="ac-badge b-red">KRİTİK</span>
+    <span class="ac-arr" id="a-e1">▶</span>
+  </div>
+  <div class="ac-body" id="e1">
+    <div class="fi" data-s="kid fffe kimlik can bus ewm zska">
+      <div class="fi-code">KID FFFE</div>
+      <div class="fi-name">Çoklu Kart CAN İletişim Başarısız</div>
+      <div class="fi-cause">FFFE = hex olarak tüm bitler aktif = birden fazla kart CAN bus üzerinden sisteme kendini tanıtamıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM ADIMLAR</div>
+      <div class="fi-fix">1. Enerji yokken CAN-H/L arası = 60 Ohm ölç<br>2. EWM1 üzerindeki PCA82C250 transceiver değiştir<br>3. EWM1↔BAM arası flat kablo tel kontrolü<br>4. ZSKA/ZSKB pil voltajı = min 3.0V<br>5. Parametre sıfırlama → Servis menüsü → Reset</div>
+      <div class="fi-tip">⭐ Baskı seçimini iptal edince sorun geçiyorsa makine EEPROM'daki eski komutu uygulamaya çalışıyor. Parametreleri fabrika ayarına sıfırla!</div>
+      <div class="fi-expert">🌍 UZMAN: EWM1 üzerindeki PCA82C250 CAN transceiver ısındıkça iletişimi kesiyor. Değiştirme maliyeti 3-5€ ama çözüm %80 oranında garantili.</div>
+    </div>
+    <div class="fi" data-s="kid 0001 ewm1 tanımlanamadı">
+      <div class="fi-code">KID 0001</div>
+      <div class="fi-name">EWM1 Kartı CAN'da Tanınamadı</div>
+      <div class="fi-cause">EWM1 kartı açılış sırasında CAN bus kimlik yayınına cevap vermiyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. EWM1 kart söküp tak<br>2. EWM1 +5V besleme = 4.9-5.1V kontrol<br>3. PCA82C250 / TJA1050 transceiver değiştir<br>4. Kristal osilatör sinyali osiloskopla</div>
+      <div class="fi-tip">Soğuk hava spreyi ile EWM1'i soğut, sorun geçerse → ısıya duyarlı eleman var.</div>
+    </div>
+    <div class="fi" data-s="kid 0002 ewm2">
+      <div class="fi-code">KID 0002</div>
+      <div class="fi-name">EWM2 Kartı CAN'da Tanınamadı</div>
+      <div class="fi-cause">EWM2 CAN bus'ta cevap veremiyor. Kompresör/blower durmuyor belirtisiyle sık eşleşir.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. EWM2 besleme voltajları kontrol<br>2. EWM2 flat kablo bağlantısı<br>3. PCA82C250 değiştir<br>4. BAM ↔ EWM2 CAN segmenti 60 Ohm mu?</div>
+    </div>
+    <div class="fi" data-s="kid 0004 bam merkezi">
+      <div class="fi-code">KID 0004</div>
+      <div class="fi-name">BAM Kartı Tanınamadı</div>
+      <div class="fi-cause">BAM kartı CAN ağının koordinatörüdür. BAM susarsa tüm sistem iletişimi çöker.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. BAM +24V besleme kontrol<br>2. BAM kart kondansatörleri ESR ölç<br>3. BAM CAN transceiver değiştir<br>4. BAM kart tamamen değiştir (son çare)</div>
+      <div class="fi-warn">⚠️ BAM kart değiştirince makine parametreleri sıfırlanabilir!</div>
+    </div>
+    <div class="fi" data-s="kid 0008 zska zskb ana işlemci">
+      <div class="fi-code">KID 0008</div>
+      <div class="fi-name">ZSKA/ZSKB Ana İşlemci Tanınamadı</div>
+      <div class="fi-cause">Makinenin beyni olan ZSKA/ZSKB CAN bus'ta cevap veremiyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. ZSKA +5V = 4.9-5.1V, ripple &lt;20mV<br>2. Lityum pil voltajı = min 3.0V<br>3. Kristal (8-16MHz) osiloskopta temiz sinüs<br>4. RAM ve EPROM çiplerini kontrol et</div>
+      <div class="fi-warn">⚠️ Pil 2.8V altına düştüyse hafıza KAYBEDİLEBİLİR!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">DELTA (Δ) HATALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e2')">
+    <div class="ac-ic ic-amber">△</div>
+    <div class="ac-title">Δ — Baskı ve Operasyon Hataları</div>
+    <span class="ac-badge b-amber">ÖNEMLİ</span>
+    <span class="ac-arr" id="a-e2">▶</span>
+  </div>
+  <div class="ac-body" id="e2">
+    <div class="fi" data-s="delta 11 baskı açılmadı impression sensör">
+      <div class="fi-code">Δ11</div>
+      <div class="fi-name">Baskı Açma Emri — Gerçekleşmedi</div>
+      <div class="fi-cause">EWM1 baskı açma komutu gönderdi fakat baskı kolu pozisyon sensöründen "açık" konfirmasyonu gelmedi.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Baskı kolu indüktif sensörü mesafesi = 0.5-1mm<br>2. Sensör 24V besleme kontrol<br>3. EWM1 CAN iletişimi (KID FFFE önce çöz!)<br>4. Baskı kolu mekanik sıkışma kontrolü</div>
+      <div class="fi-tip">HIZLI TEST: Baskı koluna elle hafifçe bas, o anda baskıya giriyorsa sensör pozisyon alamıyor demektir.</div>
+    </div>
+    <div class="fi" data-s="delta 20 kağıt yok tabla sensör">
+      <div class="fi-code">Δ20</div>
+      <div class="fi-name">Kağıt Yok / Tabla Boş</div>
+      <div class="fi-cause">Tabla sensörü kağıt algılamıyor veya SLT kartına 24V sinyal ulaşmıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Tabla indüktif sensörünü temizle (mesafe 0.5-1mm)<br>2. SLT kart giriş optokuplörü kontrol<br>3. Sensör 24V besleme hattı</div>
+    </div>
+    <div class="fi" data-s="delta 21 çift kağıt dnk ultrasonik">
+      <div class="fi-code">Δ21</div>
+      <div class="fi-name">Çift Kağıt Algılandı</div>
+      <div class="fi-cause">DNK kartı ultrasonik sensörü iki üst üste kağıt algıladı veya sensör yanlış kalibre edilmiş.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. DNK sensör kafalarını hizala (0.1mm hassasiyetle)<br>2. Teach-in kalibrasyonu yenile<br>3. Pot oksidasyonu temizle<br>4. Sensör besleme 24V stabil mi?<br>5. Ultrasonik verici = 40kHz ölç</div>
+    </div>
+    <div class="fi" data-s="delta 30 hız motor encoder">
+      <div class="fi-code">Δ30</div>
+      <div class="fi-name">Hız Referans Uyumsuzluğu</div>
+      <div class="fi-cause">Ana motor devri, EWK kartının referans değerinden %10+ sapıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Ana motor encoder sinyali A/B kanalı kontrol<br>2. EWK kart hız referans potansiyometresi<br>3. Motor sürücüsü kendi hata kodunu oku</div>
+    </div>
+    <div class="fi" data-s="delta 50 mürekkep merdane mid">
+      <div class="fi-code">Δ50</div>
+      <div class="fi-name">Mürekkep/Su Sistemi Hatası</div>
+      <div class="fi-cause">Mürekkep veya su merdanesi pozisyon hatası.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. MID kart motor çıkış voltajları<br>2. Merdane encoder sinyali<br>3. Sigorta dirençleri ölç<br>4. Motor mekanik sıkışma</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">F KODLARI — KRİTİK GÜVENLİK</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e3')">
+    <div class="ac-ic ic-red">🛑</div>
+    <div class="ac-title">F — Kritik Güvenlik Hataları</div>
+    <span class="ac-badge b-red">STOP</span>
+    <span class="ac-arr" id="a-e3">▶</span>
+  </div>
+  <div class="ac-body" id="e3">
+    <div class="fi" data-s="f01 acil stop emniyet esm bam">
+      <div class="fi-code">F01</div>
+      <div class="fi-name">Acil Stop / Emniyet Zinciri Açık</div>
+      <div class="fi-cause">Güvenlik zincirinde kopukluk. Acil stop butonu, kapak switch veya ışık perdesi açık.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Tüm acil stop butonlarını kontrol et<br>2. ESM2 güvenlik rölesi (çift kanal)<br>3. KLM kart kapak switch 24V sinyali<br>4. Güvenlik zincirini halka halka test et</div>
+      <div class="fi-tip">ESM2 güvenlik röleleri çift kanallıdır — her iki kanal ayrı ayrı test edilmeli!</div>
+    </div>
+    <div class="fi" data-s="f10 motor ana sürücü inverter">
+      <div class="fi-code">F10</div>
+      <div class="fi-name">Ana Motor Sürücü Hatası</div>
+      <div class="fi-cause">Ana baskı motoru inverter hata verdi veya motor aşırı yük.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Inverter display'inden hata kodunu oku<br>2. Motor termik koruma sıfırla<br>3. Motor yük akımı ölç<br>4. EWK kart referans sinyali (0-10V)</div>
+    </div>
+    <div class="fi" data-s="f11 besleme ntm güç voltaj">
+      <div class="fi-code">F11</div>
+      <div class="fi-name">Güç Kaynağı Besleme Hatası</div>
+      <div class="fi-cause">NTM kart çıkış voltajlarından biri nominal değerin dışında.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. NTM: +24V=23-25V, +5V=4.9-5.1V, ±15V=±14.5-15.5V<br>2. Sigortalar multimetre ile kontrol<br>3. Kondansatör ESR ölç<br>4. Trafo sekonder sargı</div>
+      <div class="fi-tip">Gözle sağlam görünen sigorta yanmış olabilir! Multimetre şart.</div>
+    </div>
+    <div class="fi" data-s="f20 can bus iletişim">
+      <div class="fi-code">F20</div>
+      <div class="fi-name">CAN Bus İletişim Hatası</div>
+      <div class="fi-cause">CAN bus üzerinde veri paket hataları aşıldı.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. CAN-H/L enerji yokken = 60 Ohm<br>2. CAN sinyal: H=2.5-3.5V, L=1.5-2.5V<br>3. CAN transceiver kontrol<br>4. Shield topraklama tek noktadan</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">SM52 / SM74 ÖZEL HATA KODLARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e5')">
+    <div class="ac-ic ic-orange">🖨️</div>
+    <div class="ac-title">SM52 — Özel Hata Kodları</div>
+    <span class="ac-badge b-amber">SM52</span>
+    <span class="ac-arr" id="a-e5">▶</span>
+  </div>
+  <div class="ac-body" id="e5">
+    <div class="fi" data-s="sm52 20:33 20:34 20:65 basic module fan">
+      <div class="fi-code">20:33 / 20:34 / 20:65</div>
+      <div class="fi-name">SM52 — Basic Module Fan / Isıtıcı Hatası</div>
+      <div class="fi-cause">Basic Module 2 fanı arızalanınca ısıtma lambaları çalışmayı durduruyor. Soğutma sistemi fan arızasına bağlı.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Basic Module 2 fanını kontrol et ve değiştir<br>2. Soğutma sıvısı seviyesini kontrol et<br>3. Fan değişimi sonrası ısıtma lambalarını test et<br>4. NTC sensörü kontrol et (25°C = 10-47kΩ)</div>
+      <div class="fi-tip">⭐ Fan değiştirince sorun çözülmüyorsa Basic Module 2 kart kondansatörlerini ESR ile ölç.</div>
+    </div>
+    <div class="fi" data-s="sm52 hız 3000 alarm encoder ewk">
+      <div class="fi-code">SM52 — Hız Alarmı</div>
+      <div class="fi-name">3000 Devir Üzerinde Alarm / Makine Duruyor</div>
+      <div class="fi-cause">1996 model SM52'lerde yaygın sorun. Ana motor encoder sinyali veya EWK kart referans hatası. Motor devri kontrol devresi sapıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. EWK1 kart kontrol (intermittent arıza çok yaygın)<br>2. Motor encoder A/B kanal sinyali osiloskopla ölç<br>3. EWK kart hız referans potansiyometresi temizle<br>4. Inverter kendi hata kodunu oku<br>5. Motor fırça aşınması kontrol</div>
+      <div class="fi-tip">⭐ EWK1 kartı sökme-takma ile geçici çözüm oluyorsa konnektör oksidasyonu — kontakları temizle.</div>
+      <div class="fi-warn">⚠️ EWK1 değiştirilecekse parametre yedeklemesi şart!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e6')">
+    <div class="ac-ic ic-cyan">⚙️</div>
+    <div class="ac-title">SM74 — Özel Hata Kodları</div>
+    <span class="ac-badge b-cyan">SM74</span>
+    <span class="ac-arr" id="a-e6">▶</span>
+  </div>
+  <div class="ac-body" id="e6">
+    <div class="fi" data-s="sm74 ssk 7f7f servo motor init dyn hata">
+      <div class="fi-code">SSK-1 / SSK-2: 7F7F</div>
+      <div class="fi-name">SM74 — Servo Motor Tanıma Hatası</div>
+      <div class="fi-cause">SSK modülleri arası parazit. 1996 SM74'lerde çok yaygın. Makine INIT/DYN testinde tüm servo motorları görmüyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM ADIMLAR</div>
+      <div class="fi-fix">1. SSK2 modülünü yuvadan çıkar, makineyi aç<br>2. SSK-1 INIT/DYN değerlerini kontrol et<br>3. SSK modüllerini tek tek test et<br>4. SSR ana kartın arkasındaki mavi konnektörleri temizle<br>5. SSR↔REE flat kablo kontrolü<br>6. NTK kartları: +5V ve +24V tolerans ±0.7% içinde mi?</div>
+      <div class="fi-tip">⭐ SSK modülündeki kırmızı LED: Normal açılışta yanar, motor dönerken söner. Bozuk SSK'da LED geç yanar veya hiç yanmaz.</div>
+      <div class="fi-warn">⚠️ NTK voltajları %0.7 dışına çıkmışsa SSK tanıma kesinlikle başarısız olur — önce voltajları düzelt!</div>
+    </div>
+    <div class="fi" data-s="sm74 hak ffdd ffef sek ffcf servo merdane durmuyor">
+      <div class="fi-code">HAK-FFDD / SAK-FFEF / SEK-FFCF</div>
+      <div class="fi-name">SM74 — Merdane Motorları Çalışmıyor</div>
+      <div class="fi-cause">Alcolor merdane motorları INIT testinde görünmüyor. HAK kartı BLA-IC veya Tacho-IC arızası.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. HAK kartı BLA-IC (Brushless drive IC) değiştir<br>2. HAK kartı Tacho-IC kontrol<br>3. HAK EPROM ve RAM çiplerini kontrol et<br>4. LTK LED durumu: Motor dönerken sönmeli, beklerken yanmalı<br>5. F1/F2 sigortaları multimetre ile ölç<br>6. 48V DC hat kontrol (STK kartı)</div>
+      <div class="fi-tip">⭐ LTK LED arızada yanıyorsa: HAK'ta etkinleştirme yok, aşırı akım veya sigorta yanmış demektir.</div>
+    </div>
+    <div class="fi" data-s="sm74 register kayması timing zincir besleme">
+      <div class="fi-code">SM74 — Register / Paso Kayması</div>
+      <div class="fi-name">Besleme Zamanlaması Kayıyor — Register Tutmuyor</div>
+      <div class="fi-cause">SM74'lerde ÇOKBILINEN arıza: Besleme timing zinciri uzuyor. 1999-2003 model makinelerde neredeyse kaçınılmaz. Hava kaçağı da besleme bozukluğuna yol açıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM ADIMLAR</div>
+      <div class="fi-fix">1. Önce hava kaçağını bul ve tamir et<br>2. Otomatik ayarları sıfırla, timing'i manuel kontrol et<br>3. Timing zincirini değiştir (standart bakım parçası)<br>4. Besleme zamanlamasını fabrika ayarına getir<br>5. Servo motor dişlilerini aşınmaya karşı kontrol et</div>
+      <div class="fi-tip">⭐ SM74 timing zinciri uzaması ÇOKYAYGINTIR — "kaç tane zincir taktım" diye soran ustalar var! Yeni modellerde (2003+) yağlama noktası iyileştirildi.</div>
+      <div class="fi-warn">⚠️ Hava kaçağı önce çözülmezse timing ayarı kalıcı olmaz — kalın karton basarken özellikle bozulur.</div>
+    </div>
+    <div class="fi" data-s="sm74 malfunction drive fail-safe board initest">
+      <div class="fi-code">INITEST: MALFUNCTION DRIVE FAIL-SAFE</div>
+      <div class="fi-name">SM74 CP2000 — Drive Fail-Safe Board Arızası</div>
+      <div class="fi-cause">CP2000 konsolunda INITEST hatası. DYN TEST S-HAK-3M3 FFBF ile birlikte çıkıyor. Makine çalışmıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. CP2000 kabinindeki BEK kartını kontrol et<br>2. BEK kart EPROM modülünü değiştir (register sorunu çözümü)<br>3. 15K37 rölesini kontrol et (48V DC bağlantısı)<br>4. STK kartı kontrol<br>5. SSK modülleri NTK voltajları ±0.7%</div>
+      <div class="fi-tip">⭐ BEK kart EPROM değişimi register sorununu %80 çözüyor. Güvenilir kaynak: Heidelberg yetkili servis veya aftermarket EPROM tedarikçileri.</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e6">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e6')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e6" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e6" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e6')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e6')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">E KODLARI — UYARILAR</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('e4')">
+    <div class="ac-ic ic-cyan">📋</div>
+    <div class="ac-title">E — Operasyonel Uyarılar</div>
+    <span class="ac-badge b-cyan">UYARI</span>
+    <span class="ac-arr" id="a-e4">▶</span>
+  </div>
+  <div class="ac-body" id="e4">
+    <div class="fi" data-s="e10 sıcaklık overheat ttk ntc">
+      <div class="fi-code">E10</div>
+      <div class="fi-name">Sıcaklık Uyarısı</div>
+      <div class="fi-cause">TTK kartı NTC sensöründen yüksek değer okudu.</div>
+      <div class="fi-fix">1. NTC 25°C = 10-47kΩ<br>2. Soğutma fanları dönüyor mu?<br>3. Termal macun durumu</div>
+    </div>
+    <div class="fi" data-s="e15 vakum kompresör basınç svm">
+      <div class="fi-code">E15</div>
+      <div class="fi-name">Vakum/Hava Basıncı Uyarısı</div>
+      <div class="fi-cause">SVM kartı kompresör çıkış basıncı düşük algıladı.</div>
+      <div class="fi-fix">1. Kompresör basıncı = 2-6 bar<br>2. SVM kart triac/röle çıkışı<br>3. Hortum sızıntısı kontrol<br>4. Basınç sensörü 0.5-4.5V lineer mi?</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_e4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('e4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_e4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_e4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('e4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('e4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- HEX -->
+<div class="sec" id="sec-hex">
+<div class="slb">1996+ CP-TRONİC HEX KODLARI</div>
+<div class="tc">
+  <div class="tc-title">📖 HEX Kod Sistemi</div>
+  <div class="tc-body">Heidelberg CP-Tronic'te hata kodları hexadecimal sistemde. <b>FFFE, 0001, 0002</b> gibi kodlar CAN bus protokolünün parçası. Her bit bir kartı temsil eder.</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('h1')">
+    <div class="ac-ic ic-purple">🔢</div>
+    <div class="ac-title">CAN Bus HEX Hata Kodları</div>
+    <span class="ac-badge b-purple">HEX</span>
+    <span class="ac-arr" id="a-h1">▶</span>
+  </div>
+  <div class="ac-body" id="h1">
+    <div class="fi" data-s="hex 0000 normal">
+      <div class="fi-code">HEX: 0000</div>
+      <div class="fi-name">Tüm Kartlar Normal — Sistem OK</div>
+      <div class="fi-fix" style="color:var(--green2);">✅ Normal durum. İşlem gerekmiyor.</div>
+    </div>
+    <div class="fi" data-s="hex 0001 ewm1">
+      <div class="fi-code">HEX: 0001</div>
+      <div class="fi-name">Bit 0 = EWM1 Kimlik Hatası</div>
+      <div class="fi-cause">Binary: 0000 0000 0000 0001 → EWM1 CAN'da yok.</div>
+      <div class="fi-fix">EWM1 CAN transceiver, besleme ve bağlantı kontrolü.</div>
+    </div>
+    <div class="fi" data-s="hex 0002 ewm2">
+      <div class="fi-code">HEX: 0002</div>
+      <div class="fi-name">Bit 1 = EWM2 Kimlik Hatası</div>
+      <div class="fi-cause">Binary: 0000 0000 0000 0010 → EWM2 CAN'da yok.</div>
+      <div class="fi-fix">EWM2 CAN transceiver, flat kablo, besleme kontrolü.</div>
+    </div>
+    <div class="fi" data-s="hex 0004 bam">
+      <div class="fi-code">HEX: 0004</div>
+      <div class="fi-name">Bit 2 = BAM Koordinatör Hatası</div>
+      <div class="fi-fix">BAM besleme, transceiver ve kristal kontrolü.</div>
+    </div>
+    <div class="fi" data-s="hex 0008 zska zskb">
+      <div class="fi-code">HEX: 0008</div>
+      <div class="fi-name">Bit 3 = ZSKA/ZSKB Ana İşlemci</div>
+      <div class="fi-fix">ZSKA +5V, pil voltajı, kristal ve RAM kontrolü.</div>
+    </div>
+    <div class="fi" data-s="hex ffff tüm kartlar">
+      <div class="fi-code">HEX: FFFF</div>
+      <div class="fi-name">Tam Sistem Çöküşü</div>
+      <div class="fi-cause">Hiçbir kart CAN'da görünmüyor. Ana hat kısa devre veya NTM tam arızası.</div>
+      <div class="fi-fix">1. CAN-H/L kısa devre kontrolü<br>2. NTM tüm voltajlar<br>3. Ana topraklama<br>4. CAN terminasyon dirençleri (2×120Ω)</div>
+      <div class="fi-warn">⚠️ Önce güç kaynağını, sonra CAN hattını incele!</div>
+    </div>
+    <div class="fi" data-s="hex fffe çoklu kart">
+      <div class="fi-code">HEX: FFFE</div>
+      <div class="fi-name">Neredeyse Tüm Kartlar Yok</div>
+      <div class="fi-fix">CAN bus hat empedansı, NTM besleme, tüm konnektörler.</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_h1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('h1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_h1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_h1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('h1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('h1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- KARTLAR -->
+<div class="sec" id="sec-kart">
+<div class="slb">ANA KONTROL KARTLARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k1')">
+    <div class="ac-ic ic-amber">🧠</div>
+    <div class="ac-title">ZSKA / ZSKB — Ana İşlemci</div>
+    <span class="ac-badge b-amber">BEYİN</span>
+    <span class="ac-arr" id="a-k1">▶</span>
+  </div>
+  <div class="ac-body" id="k1">
+    <div class="ki" data-s="zska zskb pil eeprom işlemci">
+      <div class="ki-name">ZSKA / ZSKB Kartı</div>
+      <div class="ki-role">Ana CPU ve Hafıza Kartı</div>
+      <div class="ki-desc">Tüm CAN ağını yönetir. İş programları ve parametreler EEPROM'da saklanır. SRAM lityum pil ile korunur.</div>
+      <div class="ki-lbl lbl-green">📊 ÖLÇÜM</div>
+      <div class="ki-val">VCC: 5.0V ±0.1V, ripple &lt;20mV<br>Pil: 3.0-3.6V<br>CAN-H/L: 60Ω<br>Kristal: 8/16MHz sinüs</div>
+      <div class="ki-tip">⭐ Pil değiştirirken ENERJİYİ KESME! SRAM verisi silinir.</div>
+      <div class="ki-warn">⚠️ Pil 2.8V altı → EEPROM yedekle sonra değiştir!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k2')">
+    <div class="ac-ic ic-cyan">⚡</div>
+    <div class="ac-title">EWM1 / EWM2 — Hız ve Kontrol</div>
+    <span class="ac-badge b-cyan">KONTROL</span>
+    <span class="ac-arr" id="a-k2">▶</span>
+  </div>
+  <div class="ac-body" id="k2">
+    <div class="ki" data-s="ewm1 hız baskı motor referans">
+      <div class="ki-name">EWM1 Kartı</div>
+      <div class="ki-role">Ana Motor Hız Kontrolü + Baskı Komutları</div>
+      <div class="ki-desc">Baskı açma/kapama komutlarını yürütür. Motor için 0-10V referans üretir. KID FFFE hatalarında ilk şüphelenilecek kart.</div>
+      <div class="ki-lbl lbl-green">📊 ÖLÇÜM</div>
+      <div class="ki-val">+5V: 4.9-5.1V<br>+24V: 23-25V<br>±15V: ±14.5-15.5V<br>Hız ref: 0-10V DC<br>PCA82C250 Vcc: 5V ±0.25V</div>
+      <div class="ki-tip">⭐ KID FFFE → PCA82C250 değiştir (3-5€, %80 çözüm). Soğuk sprey testi yap.</div>
+      <div class="ki-warn">⚠️ Flat kablo içi kopuk tel çok sık! Her teli multimetre ile test et.</div>
+    </div>
+    <div class="ki" data-s="ewm2 kompresör blower stop">
+      <div class="ki-name">EWM2 Kartı</div>
+      <div class="ki-role">Yardımcı Fonksiyonlar + Stop Komutları</div>
+      <div class="ki-desc">Mürekkep sistemi, kompresör ve blower kontrolü. Stop komutlarını SVM'ye iletir.</div>
+      <div class="ki-val">Besleme: EWM1 ile aynı<br>Stop çıkış: 0V aktif<br>CAN segment: 60Ω</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k3')">
+    <div class="ac-ic ic-green">🔋</div>
+    <div class="ac-title">NTM — Ana Güç Kaynağı</div>
+    <span class="ac-badge b-green">GÜÇ</span>
+    <span class="ac-arr" id="a-k3">▶</span>
+  </div>
+  <div class="ac-body" id="k3">
+    <div class="ki" data-s="ntm güç voltaj sigorta besleme">
+      <div class="ki-name">NTM Kartı</div>
+      <div class="ki-role">Ana Güç Dağıtımı</div>
+      <div class="ki-desc">Trafo çıkışlarını filtreler ve tüm kartlara dağıtır. Sigortalar, kondansatörler, regülatörler burada.</div>
+      <div class="ki-lbl lbl-green">📊 ÖLÇÜM</div>
+      <div class="ki-val">+24V: 23-25V, ripple &lt;200mV<br>+5V: 4.90-5.10V, ripple &lt;50mV<br>+15V: 14.50-15.50V<br>-15V: -14.50 ~ -15.50V<br>Sigorta: 0Ω=sağlam / OL=yanmış<br>ESR: &lt;100mΩ</div>
+      <div class="ki-tip">⭐ Sigortaları GÖZLE DEĞİL multimetre ile kontrol et!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k4')">
+    <div class="ac-ic ic-red">🛡️</div>
+    <div class="ac-title">BAM / ESM2 — Güvenlik</div>
+    <span class="ac-badge b-red">EMNİYET</span>
+    <span class="ac-arr" id="a-k4">▶</span>
+  </div>
+  <div class="ac-body" id="k4">
+    <div class="ki" data-s="bam can koordinatör">
+      <div class="ki-name">BAM Kartı</div>
+      <div class="ki-role">CAN Bus Koordinatörü</div>
+      <div class="ki-desc">Tüm kart iletişimini koordine eder. BAM susarsa hiçbir kart konuşamaz.</div>
+      <div class="ki-val">+24V: 23-25V<br>CAN-H/L: 60Ω<br>Aktif: H=2.5-3.5V, L=1.5-2.5V<br>LED yeşil sabit = normal</div>
+    </div>
+    <div class="ki" data-s="esm2 emniyet röle güvenlik">
+      <div class="ki-name">ESM2 Güvenlik Modülü</div>
+      <div class="ki-role">Emniyet Zinciri ve Güvenlik Rölesi</div>
+      <div class="ki-desc">Acil stop, kapak switch sinyallerini işler. Çift kanallı güvenlik rölesi kullanır.</div>
+      <div class="ki-val">Röle bobin: 24V DC<br>Kontaklar: &lt;0.5Ω iletimde<br>Switch girişi: 24V = kapalı</div>
+      <div class="ki-warn">⚠️ Röle kontakları ark hasarı yapabilir!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k5')">
+    <div class="ac-ic ic-purple">🎯</div>
+    <div class="ac-title">DNK — Çift Kağıt Kontrol</div>
+    <span class="ac-badge b-purple">SENSÖR</span>
+    <span class="ac-arr" id="a-k5">▶</span>
+  </div>
+  <div class="ac-body" id="k5">
+    <div class="ki" data-s="dnk çift kağıt ultrasonik teach-in">
+      <div class="ki-name">DNK Kartı (Doppelbogenkontrolle)</div>
+      <div class="ki-role">Ultrasonik Çift Kağıt Algılama</div>
+      <div class="ki-desc">40kHz ultrasonik sensörle kağıt sayısını algılar. Potansiyometre eşik ayarı zamanla bozulabilir.</div>
+      <div class="ki-lbl lbl-green">📊 ÖLÇÜM</div>
+      <div class="ki-val">Verici: 40kHz ±0.5kHz<br>Alıcı (kağıtsız): &gt;2V<br>Alıcı (tek kağıt): 0.5-2V<br>Alıcı (çift kağıt): &lt;0.5V<br>Besleme: 24V, ripple &lt;100mV</div>
+      <div class="ki-tip">⭐ Yanlış alarm → Önce teach-in yenile. Sonra pot temizliği.</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k6')">
+    <div class="ac-ic ic-blue">📋</div>
+    <div class="ac-title">SLM / SLT — Tabla Kontrolü</div>
+    <span class="ac-badge b-blue">TABLA</span>
+    <span class="ac-arr" id="a-k6">▶</span>
+  </div>
+  <div class="ac-body" id="k6">
+    <div class="ki" data-s="slm slt tabla sürgü motor">
+      <div class="ki-name">SLM / SLT Kartları</div>
+      <div class="ki-role">Kağıt Tabla Motor Kontrolü</div>
+      <div class="ki-val">Motor PWM: 0-24V<br>Limit switch: 24V aktif<br>Pot konum: 0-5V<br>Darlington Vce: &lt;0.5V</div>
+      <div class="ki-tip">Tabla sarsıntılı: Darlington transistör veya H-köprü bozuk. PWM sinyali osiloskopla kontrol.</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k6">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k6')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k6" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k6" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k6')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k6')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k7')">
+    <div class="ac-ic ic-green">🎨</div>
+    <div class="ac-title">MID / EAM — Motor Interface</div>
+    <span class="ac-badge b-green">MOTOR</span>
+    <span class="ac-arr" id="a-k7">▶</span>
+  </div>
+  <div class="ac-body" id="k7">
+    <div class="ki" data-s="mid eam mürekkep motor h-köprü">
+      <div class="ki-name">MID / EAM Kartları</div>
+      <div class="ki-role">Mürekkep ve Register Motor Sürücüsü</div>
+      <div class="ki-val">Motor çıkış: ±24V PWM<br>Encoder: 0-5V, 90° faz<br>Sigorta direnç: 0.1-1Ω<br>H-köprü Vce: &lt;0.5V</div>
+      <div class="ki-warn">⚠️ Sigorta dirençleri görsel sağlam görünebilir — mutlaka ölç!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k7">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k7')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k7" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k7" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k7')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k7')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k8')">
+    <div class="ac-ic ic-cyan">💨</div>
+    <div class="ac-title">SVM — Vakum ve Kompresör</div>
+    <span class="ac-badge b-cyan">HAVA</span>
+    <span class="ac-arr" id="a-k8">▶</span>
+  </div>
+  <div class="ac-body" id="k8">
+    <div class="ki" data-s="svm vakum kompresör triac basınç">
+      <div class="ki-name">SVM Kartı</div>
+      <div class="ki-role">Vakum Pompası ve Kompresör Yönetimi</div>
+      <div class="ki-val">Çıkış: 220V AC<br>Triac iletimde: 1-2V düşme<br>Basınç sensörü: 0.5-4.5V<br>Kompresör: 2-6 bar</div>
+      <div class="ki-tip">Kompresör durmuyor: EWM2'den stop sinyali SVM'ye ulaşmıyor. Sinyal hattını ölç.</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k8">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k8')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k8" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k8" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k8')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k8')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('k9')">
+    <div class="ac-ic ic-amber">🌡️</div>
+    <div class="ac-title">TTK / LTM — Isı Yönetimi</div>
+    <span class="ac-badge b-amber">ISI</span>
+    <span class="ac-arr" id="a-k9">▶</span>
+  </div>
+  <div class="ac-body" id="k9">
+    <div class="ki" data-s="ttk ltm sıcaklık ntc fan">
+      <div class="ki-name">TTK / LTM Kartları</div>
+      <div class="ki-role">Sıcaklık Kontrolü</div>
+      <div class="ki-val">NTC 25°C: 10-47kΩ<br>NTC 100°C: 1-5kΩ<br>Fan PWM: %20-100<br>Heater: 220V AC triac</div>
+      <div class="ki-warn">⚠️ Termal pasta kuruyorsa soğukken overheat hatası verir!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_k9">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('k9')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_k9" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_k9" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('k9')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('k9')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- QA -->
+<div class="sec" id="sec-qa">
+<div class="slb">UZMANLARA SORULAN 40 KRİTİK SORU</div>
+<div id="qaList"></div>
+</div>
+
+<!-- PÜF NOKTALARI -->
+<div class="sec" id="sec-tip">
+<div class="slb">ALTIN KURALLAR</div>
+<div class="tc">
+  <div class="tc-title">⚡ CAN Bus 30 Saniyelik Hızlı Test</div>
+  <div class="tc-body">ENERJİ VERMEDEN CAN-H ve CAN-L arasını ölç:<br><em>60 Ohm → Normal</em><br><b>120 Ohm → Bir terminasyon kopuk</b><br><s>0 Ohm → Kısa devre!</s><br><u>OL → Her iki terminasyon yok</u></div>
+</div>
+<div class="tc">
+  <div class="tc-title">🌡️ Isıya Bağlı Arıza Teşhisi</div>
+  <div class="tc-body">Soğuk hava spreyi ile EWM1/EWM2'yi soğut.<br><em>Sorun geçerse → PCA82C250 değiştir (3-5€)</em><br>Değişmezse → Kristal veya besleme kondansatörü</div>
+</div>
+<div class="tc">
+  <div class="tc-title">🔋 Pil Kritik Eşikler</div>
+  <div class="tc-body"><em>3.0-3.6V → Normal</em><br><b>2.8-3.0V → Yakında değiştir</b><br><s>2.8V altı → VERİ KAYBEDİLEBİLİR!</s><br><s>Pil değiştirirken ENERJİYİ ASLA KESME!</s></div>
+</div>
+<div class="tc">
+  <div class="tc-title">🔌 Sigorta Altın Kuralı</div>
+  <div class="tc-body"><s>GÖZLE KONTROL YETMEZİ</s><br><em>0 Ohm → Sağlam</em><br><s>OL → Yanmış, değiştir</s></div>
+</div>
+<div class="tc">
+  <div class="tc-title">🧪 ESR Ölçümü Kritik</div>
+  <div class="tc-body">Görsel sağlam kondansatör ESR'i 10 kat artmış olabilir.<br><em>Normal ESR: 1-100mΩ</em><br><b>Yüksek ESR → Voltaj dalgalanması → Sistem hataları</b></div>
+</div>
+<div class="tc">
+  <div class="tc-title">💡 KID FFFE Protokolü</div>
+  <div class="tc-body"><b>Baskı iptalde geçiyor:</b> <em>Servis → Parametreler → Reset</em><br><b>Isındıkça kötüleşiyor:</b> <em>PCA82C250 değiştir</em><br><b>Her zaman oluyor:</b> <em>Flat kablo tel testi</em></div>
+</div>
+<div class="slb">OSİLOSKOP REFERANS</div>
+<div class="tc">
+  <div class="tc-title">📡 CAN Bus Sinyal</div>
+  <div class="tc-body">Resesif: <em>H = L = 2.5V</em><br>Dominant: <em>H=3.5V, L=1.5V, fark=2V</em><br>Bit hızı: <b>125k / 250k / 500 kBit/s</b></div>
+</div>
+<div class="tc">
+  <div class="tc-title">📡 NTM Ripple Limitleri</div>
+  <div class="tc-body">+24V: <em>&lt;200mV</em><br>+5V: <em>&lt;50mV</em><br>±15V: <em>&lt;100mV</em></div>
+</div>
+<div class="tc">
+  <div class="tc-title">📡 Encoder Sinyal</div>
+  <div class="tc-body">A/B: <em>0-5V kare, rise/fall &lt;1μs</em><br>Faz: <em>90° (1/4 periyot)</em><br>Z: <em>Her turda 1 puls</em></div>
+</div>
+<div class="tc">
+  <div class="tc-title">📡 İndüktif Sensör</div>
+  <div class="tc-body">NPN aktif: <em>0-2V</em><br>PNP aktif: <em>VCC-2V</em><br>Mesafe: <em>0.5-1.0mm standard</em></div>
+</div>
+</div>
+
+<!-- KLASİK ARIZALAR -->
+<div class="sec" id="sec-klasik">
+<div class="slb">BESLEME SİSTEMİ ARIZALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m1')">
+    <div class="ac-ic ic-blue">📄</div>
+    <div class="ac-title">Besleme / Feeder Arızaları</div>
+    <span class="ac-badge b-blue">BESLEME</span>
+    <span class="ac-arr" id="a-m1">▶</span>
+  </div>
+  <div class="ac-body" id="m1">
+    <div class="fi" data-s="besleme kağıt çift almıyor yanlış zamanlama feeder sm52 sm74">
+      <div class="fi-code">BESLEME — Kağıt Düzensiz Alınıyor</div>
+      <div class="fi-name">Kağıt Düzensiz / Geç / Erken Alınıyor</div>
+      <div class="fi-cause">Vantuz zamanlaması kaymış, hava basıncı dengesiz veya vantuz lastiği aşınmış.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Vantuz lastiği aşınma kontrolü — sertleşmiş veya çatlak varsa değiştir<br>2. Hava basıncı: 2-6 bar stabil mi?<br>3. Besleme emme bandı (suction belt) delikleri tıkalı mı?<br>4. Emme bandı gerginliği kontrol<br>5. Vantuz yay kuvveti kontrol<br>6. Timing ayarı: Otomatik ayarları sıfırla, manuel kontrol</div>
+      <div class="fi-tip">⭐ SM74'te timing zinciri uzaması BU SORUNUN başlıca sebebidir. Önce zinciri kontrol et!</div>
+    </div>
+    <div class="fi" data-s="besleme bant delik emme sm52 vakum">
+      <div class="fi-code">BESLEME — Emme Bandı</div>
+      <div class="fi-name">Emme Bandı Yıpranmış / Kayıyor</div>
+      <div class="fi-cause">SM52 emme bandı (960×60×1.6mm) zamanla delikler tıkanıyor veya bant yırtılıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Bandı söküp delikleri hava ile temizle<br>2. Bant yüzeyini izopropanol ile sil<br>3. Yırtık veya tıkalı band değiştir (SM52: 960x60mm)<br>4. Vakum seviyesini kontrol et</div>
+      <div class="fi-tip">⭐ Emme bandı değişimi sonrası her zaman vakum kalibrasyonu yap.</div>
+    </div>
+    <div class="fi" data-s="besleme yan lay elektrik elektronik kontrol kaçma">
+      <div class="fi-code">YAN LAY — Elektronik Kontrol</div>
+      <div class="fi-name">Yan Lay Pozisyonu Kaçıyor</div>
+      <div class="fi-cause">Elektronik yan lay kontrolü (electronic sidelay) kayboluyor veya tutarsız çalışıyor.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Yan lay motor encoder sinyali kontrol<br>2. Yan lay kart (SLM) motor PWM çıkışı ölç<br>3. Referans pot temizle (oksidasyon)<br>4. Mekanik tıkanma var mı kontrol<br>5. Sıfırlama: CP-Tronic'ten yan lay kalibrasyonu</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m1">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m1')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m1" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m1" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m1')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m1')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">ALCOLOR ISLAK SISTEM ARIZALARI</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m2')">
+    <div class="ac-ic ic-cyan">💧</div>
+    <div class="ac-title">Alcolor — Nemlendirme Sistemi</div>
+    <span class="ac-badge b-cyan">ALCOLOR</span>
+    <span class="ac-arr" id="a-m2">▶</span>
+  </div>
+  <div class="ac-body" id="m2">
+    <div class="fi" data-s="alcolor merdane dönmüyor ıslak sistem nemlendirme sm52 sm74">
+      <div class="fi-code">ALCOLOR — Merdane Çalışmıyor</div>
+      <div class="fi-name">Alcolor Merdaneleri Dönmüyor / Yetersiz Su</div>
+      <div class="fi-cause">HAK kartı arızası veya MID motor sürücüsü sorunu. SM74'te HAK-FFDD hatasıyla birlikte çıkar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. HAK kartı BLA-IC kontrol<br>2. MID kart motor çıkış voltajı (±24V PWM)<br>3. Motor fırça aşınması<br>4. Merdane mili yatak kontrolü<br>5. 24V besleme stabil mi?</div>
+      <div class="fi-tip">⭐ Alcolor merdanesi döndüğü halde yeterli su vermiyorsa: Merdane yüzeyini temizle, su tankı filtresi tıkalı olabilir.</div>
+    </div>
+    <div class="fi" data-s="alcolor su miktarı ayar alkol izopropanol konsantrasyon">
+      <div class="fi-code">ALCOLOR — Su/Alkol Dengesi</div>
+      <div class="fi-name">Baskı Sulanıyor veya Mürekkep Tutumuyor</div>
+      <div class="fi-cause">Su/alkol oranı dengesiz. Baldwin soğutma ünitesi sıcaklık sapması da buna yol açar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Alkol konsantrasyonu: %8-12 izopropanol<br>2. Çözelti sıcaklığı: 10-15°C (Baldwin chiller)<br>3. pH değeri: 4.5-5.5<br>4. İletkenlik: 800-1500 µS/cm<br>5. Baldwin filtre ve pompa kontrolü</div>
+      <div class="fi-warn">⚠️ Yaz aylarında chiller arızası baskı kalitesini direkt etkiler — Baldwin NTC sensörü ve fan kontrol!</div>
+    </div>
+    <div class="fi" data-s="alcolor form merdane şerit iz kağıt üzerinde">
+      <div class="fi-code">ALCOLOR — Merdane İzi</div>
+      <div class="fi-name">Kağıtta Merdane Şeridi / Su Lekesi</div>
+      <div class="fi-cause">Form merdanesi basıncı yanlış ayarlı veya merdane yüzeyi hasarlı.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Form merdanesi baskı ayarı: Heidelberg şerit testi (0.5mm kağıt şerit)<br>2. Merdane sertliği: Shore 25-30A<br>3. Merdane yüzeyi gözenekleri temizle<br>4. Pan merdanesi (duktor) hız oranı ayarı</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m2">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m2')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m2" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m2" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m2')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m2')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">GTO — ÖZEL ARIZALAR</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m3')">
+    <div class="ac-ic ic-amber">🔶</div>
+    <div class="ac-title">GTO 52 — Klasik Arızalar</div>
+    <span class="ac-badge b-amber">GTO</span>
+    <span class="ac-arr" id="a-m3">▶</span>
+  </div>
+  <div class="ac-body" id="m3">
+    <div class="fi" data-s="gto 52 kağıt almıyor vantuz emme mekanik">
+      <div class="fi-code">GTO — Kağıt Almıyor</div>
+      <div class="fi-name">GTO Kağıt Vantuzu Çalışmıyor</div>
+      <div class="fi-cause">GTO'da cascade besleyici sistemi. Vantuz lastiği sertleşmesi veya hava hattı sızıntısı en yaygın sebep.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Tüm vantuz lastiklerini değiştir (sertleşme kontrolü)<br>2. Hava hattı sızıntı testi (sabunlu su)<br>3. Kompresör basıncı 2-4 bar<br>4. Vantuz yay kuvveti eşitliği<br>5. Kağıt yığın yükseklik sensörü</div>
+      <div class="fi-tip">⭐ GTO vantuz lastikleri SM52'ye göre çok daha hızlı sertleşir — 2 yılda bir toplu değişim önerilir.</div>
+    </div>
+    <div class="fi" data-s="gto mürekkep sistemi form merdane baskı kalitesi">
+      <div class="fi-code">GTO — Mürekkep Sistemi</div>
+      <div class="fi-name">Mürekkep Düzensiz Dağılıyor / Şerit Yapıyor</div>
+      <div class="fi-cause">GTO'nun kısa mürekkep sistemi SM52'ye göre daha hassas. Merdane basınç dengesi kritik.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Form merdanesi basıncı: Şerit testi 5-7mm<br>2. Duktor merdanesi hız ayarı<br>3. Mürekkep sıcaklığı: 20-25°C ideal<br>4. Rider merdanesi temas kontrolü<br>5. Mürekkep bıçağı (rakle) temizliği</div>
+    </div>
+    <div class="fi" data-s="gto baskı silindiri lastik şişme takım">
+      <div class="fi-code">GTO — Baskı Silindiri</div>
+      <div class="fi-name">Blanket Şişiyor / Baskı Kalınlığı Kaçıyor</div>
+      <div class="fi-cause">Blanket altı dolgu (packing) kalınlığı yanlış veya blanket solvent emmiş.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Blanket kalınlığı: 1.95mm standard<br>2. Packing toplam: Blanket dahil 3.25mm (GTO)<br>3. Blanket torku: Eşit ve dengeli sıkılmalı<br>4. Blanket yüzeyini solventle sil, şişme varsa değiştir<br>5. Alt dolgu kağıt (packing sheet) sayısını kontrol</div>
+      <div class="fi-warn">⚠️ Blanket fazla şişmişse silindir dişlileri zarar görebilir!</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m3">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m3')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m3" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m3" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m3')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m3')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">AUTOPLATE — OTOMATİK PLAKA SİSTEMİ</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m4')">
+    <div class="ac-ic ic-purple">🔧</div>
+    <div class="ac-title">Autoplate — Otomatik Plaka Arızaları</div>
+    <span class="ac-badge b-purple">PLAKA</span>
+    <span class="ac-arr" id="a-m4">▶</span>
+  </div>
+  <div class="ac-body" id="m4">
+    <div class="fi" data-s="autoplate plaka sıkışma klips pnömatik sm52 sm74">
+      <div class="fi-code">AUTOPLATE — Plaka Takılmıyor</div>
+      <div class="fi-name">Autoplate Plakayı Sıkıştırmıyor / Serbest Bırakmıyor</div>
+      <div class="fi-cause">Plaka klips pnömatik silindiri arızası veya plaka kılavuz mekanizması sıkışması.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Pnömatik silindir hareketi kontrol (C2.184.0020)<br>2. Klips yay kuvveti kontrol<br>3. Hava hattı 4-6 bar stabil mi?<br>4. Plaka kılavuz sürgüsü temizle ve yağla<br>5. Solenoid valf (G2.335.038) kontrol</div>
+      <div class="fi-tip">⭐ Plaka tam oturmuyorsa register kaymasına neden olur. Mekanik kontrolü önce yap!</div>
+    </div>
+    <div class="fi" data-s="autoplate register paso kayması plaka eğri sm74">
+      <div class="fi-code">AUTOPLATE — Register Kayması</div>
+      <div class="fi-name">Her Plaka Değişiminde Register Kaçıyor</div>
+      <div class="fi-cause">Plaka kanalı (clamp) aşınmış veya referans pimi yerinden oynamış.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Plaka ön kenar referans pimlerini kontrol<br>2. Plaka kanal sıkma kuvveti eşit mi?<br>3. Heidelberg register sistemi kalibrasyonu<br>4. Plaka boyutu doğru mu? (Makineye göre)</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m4">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m4')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m4" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m4" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m4')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m4')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="slb">MEKANİK — GENEL ARIZALAR</div>
+<div class="ac">
+  <div class="ac-hdr" onclick="tog('m5')">
+    <div class="ac-ic ic-red">⚙️</div>
+    <div class="ac-title">Mekanik Genel Arızalar</div>
+    <span class="ac-badge b-red">MEKANİK</span>
+    <span class="ac-arr" id="a-m5">▶</span>
+  </div>
+  <div class="ac-body" id="m5">
+    <div class="fi" data-s="titreşim gürültü dişli rulman yatak mekanik">
+      <div class="fi-code">MEKANİK — Titreşim / Gürültü</div>
+      <div class="fi-name">Çalışırken Titreşim veya Anormal Gürültü</div>
+      <div class="fi-cause">Dişli aşınması, rulman hasarı veya silindir ayar bozukluğu.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Hangi hızda oluştuğunu not al (düşük/yüksek)<br>2. Baskı altında mı, boşta mı? Farkı belirle<br>3. Ana rulmanları kontrol (stethoscope ile)<br>4. Dişli yağlama: Otomatik yağlama sistemi çalışıyor mu?<br>5. Silindir basıncı ayarı (0.07-0.12 bar)</div>
+      <div class="fi-tip">⭐ Sorunların %30'u mekaniktir — elektriğe bakmadan önce mekanik kontrol yap!</div>
+    </div>
+    <div class="fi" data-s="yağlama otomatik sistem tıkanma pompa sm52 sm74">
+      <div class="fi-code">MEKANİK — Yağlama Sistemi</div>
+      <div class="fi-name">Otomatik Yağlama Çalışmıyor</div>
+      <div class="fi-cause">Yağlama pompası arızası veya yağ hattı tıkanması. Uzun vadede ciddi mekanik hasara yol açar.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Yağ deposu seviyesi kontrol<br>2. Yağ pompası çıkış basıncı<br>3. Yağ hatları tıkanma kontrolü<br>4. Yağ filtresi değişimi (6 ayda bir)<br>5. Manuel yağlama noktalarını kontrol</div>
+      <div class="fi-warn">⚠️ Yağlama sistemi arızası fark edilmezse rulman ve dişli hasarı kaçınılmaz!</div>
+    </div>
+    <div class="fi" data-s="teslim istif delivery kağıt düzgün gelmiyor fırlatıcı">
+      <div class="fi-code">TESLİM — Delivery Arızası</div>
+      <div class="fi-name">Kağıtlar Düzgün İstiflenmiyor</div>
+      <div class="fi-cause">Teslim yavaşlatıcı (sheet slowdown) veya hava üfleyici (blower) ayarı bozuk.</div>
+      <div class="fi-lbl lbl-cyan">🔧 ÇÖZÜM</div>
+      <div class="fi-fix">1. Delivery blower hava akışı ve yönü ayarla<br>2. Yavaşlatıcı fırça/kauçuk aşınma kontrolü<br>3. Kılavuz sacları (guide plates) pozisyonu<br>4. Toz spreyi (powder) miktarı: Fazla toz istifi bozar<br>5. Kağıt gramajına göre hava ayarı yeniden yap</div>
+    </div>
+  
+  <div style="padding:12px 14px;border-top:1px solid var(--b1);background:rgba(255,214,0,.03);">
+    <div style="font-size:10px;font-weight:800;color:var(--amber);letter-spacing:1px;margin-bottom:8px;">📝 USTANIN NOTLARI</div>
+    <div id="notbox_m5">
+      <div style="color:var(--t3);font-size:11px;">Henüz not eklenmedi.</div>
+    </div>
+    <button onclick="notEkleAc('m5')" style="margin-top:8px;width:100%;padding:9px;border-radius:10px;border:1.5px dashed var(--amber);background:rgba(255,214,0,.05);color:var(--amber2);font-size:12px;font-weight:700;cursor:pointer;">+ Yeni Not Ekle</button>
+    <div id="notform_m5" style="display:none;margin-top:8px;">
+      <textarea id="notyaz_m5" placeholder="Çözüm yolunu, ipucunu veya notunu buraya yaz..." style="width:100%;background:var(--s3);border:1.5px solid var(--amber);border-radius:10px;padding:10px;color:var(--text);font-size:13px;line-height:1.5;resize:vertical;min-height:90px;outline:none;font-family:inherit;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:6px;">
+        <button onclick="notKaydet('m5')" style="flex:1;padding:9px;border-radius:10px;border:none;background:var(--amber);color:#000;font-size:13px;font-weight:800;cursor:pointer;">💾 Kaydet</button>
+        <button onclick="notEkleAc('m5')" style="padding:9px 14px;border-radius:10px;border:1px solid var(--t3);background:transparent;color:var(--t2);font-size:13px;cursor:pointer;">İptal</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!-- TEŞHİS -->
+<div class="sec" id="sec-teshis">
+<div class="slb">BELİRTİYE GÖRE TEŞHİS</div>
+<div class="tp">
+  <div class="tp-hdr" onclick="togTp('t1')">
+    <div class="tp-ic">🚫</div>
+    <div class="tp-title">Makine Hiç Açılmıyor</div>
+    <span class="tp-arr" id="a-t1">▶</span>
+  </div>
+  <div class="tp-body" id="t1">
+    <div class="step"><div class="step-n">1</div><div class="step-txt"><b>Ana sigorta:</b> 0Ω=sağlam, OL=yanmış.</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-txt"><b>NTM +24V:</b> Var mı? → +5V, ±15V sırayla.</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-txt"><b>ZSKA +5V:</b> 4.9-5.1V stabil, ripple &lt;20mV.</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-txt"><b>Lityum pil:</b> 3.0V üstü mü?</div></div>
+    <div class="step"><div class="step-n">5</div><div class="step-txt"><b>Ana trafo:</b> Primer 220V? Sekonder voltajlar?</div></div>
+  </div>
+</div>
+<div class="tp">
+  <div class="tp-hdr" onclick="togTp('t2')">
+    <div class="tp-ic">⚠️</div>
+    <div class="tp-title">Açılıyor Ama Baskıya Girmiyor</div>
+    <span class="tp-arr" id="a-t2">▶</span>
+  </div>
+  <div class="tp-body" id="t2">
+    <div class="step"><div class="step-n">1</div><div class="step-txt"><b>Hata kodunu not al:</b> KID? Δ? F?</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-txt"><b>Baskı seçimini iptal et:</b> Geçiyor mu? → EEPROM sıfırla.</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-txt"><b>CAN-H/L:</b> <em>60Ω = normal.</em></div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-txt"><b>Baskı kolu sensörü:</b> 0.5-1mm mesafe.</div></div>
+    <div class="step"><div class="step-n">5</div><div class="step-txt"><b>EWM1 PCA82C250:</b> Soğuk sprey → geçerse değiştir.</div></div>
+    <div class="step"><div class="step-n">6</div><div class="step-txt"><b>EWM1 flat kablo:</b> Her teli ayrı test et.</div></div>
+    <div class="step"><div class="step-n">7</div><div class="step-txt"><b>ZSKA pil:</b> Min 3.0V.</div></div>
+  </div>
+</div>
+<div class="tp">
+  <div class="tp-hdr" onclick="togTp('t3')">
+    <div class="tp-ic">🔄</div>
+    <div class="tp-title">Kompresör / Blower Durmuyor</div>
+    <span class="tp-arr" id="a-t3">▶</span>
+  </div>
+  <div class="tp-body" id="t3">
+    <div class="step"><div class="step-n">1</div><div class="step-txt"><b>EWM2 CAN:</b> KID 0002 var mı? → EWM2 stop üretemez.</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-txt"><b>EWM2→SVM stop sinyali:</b> 0V geliyor mu?</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-txt"><b>SVM triac/röle:</b> Stop sinyaline tepki veriyor mu?</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-txt"><b>EWM2 flat kablo:</b> Stop teli kopuk olabilir.</div></div>
+  </div>
+</div>
+<div class="tp">
+  <div class="tp-hdr" onclick="togTp('t4')">
+    <div class="tp-ic">📄</div>
+    <div class="tp-title">Çift Kağıt Yanlış Alarm (Δ21)</div>
+    <span class="tp-arr" id="a-t4">▶</span>
+  </div>
+  <div class="tp-body" id="t4">
+    <div class="step"><div class="step-n">1</div><div class="step-txt"><b>Teach-in yenile:</b> Kağıt değişiminde zorunlu.</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-txt"><b>Sensör hizalama:</b> 0.1mm hassasiyetle.</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-txt"><b>Besleme 24V:</b> Ripple &lt;100mV.</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-txt"><b>Pot oksidasyonu:</b> İzopropanol ile temizle.</div></div>
+    <div class="step"><div class="step-n">5</div><div class="step-txt"><b>Verici 40kHz:</b> Osiloskopla doğrula.</div></div>
+  </div>
+</div>
+<div class="tp">
+  <div class="tp-hdr" onclick="togTp('t5')">
+    <div class="tp-ic">🌡️</div>
+    <div class="tp-title">Sıcaklık Hatası (E10)</div>
+    <span class="tp-arr" id="a-t5">▶</span>
+  </div>
+  <div class="tp-body" id="t5">
+    <div class="step"><div class="step-n">1</div><div class="step-txt"><b>NTC 25°C:</b> 10-47kΩ arası mı?</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-txt"><b>Termal pasta:</b> Taze mi?</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-txt"><b>Soğutma fanları:</b> Dönüyor mu?</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-txt"><b>Hava akımı:</b> Soğutma kanalları tıkalı mı?</div></div>
+  </div>
+</div>
+</div>
+
+
+<!-- GITHUB REHBERİ -->
+<div class="sec" id="sec-rehber">
+<div class="slb">📋 GITHUB GÜNCELLEME REHBERİ</div>
+<div class="tc">
+  <div class="tc-title" style="color:var(--amber2);font-size:15px;">🖥️ Programı Nasıl Güncellerim?</div>
+  <div class="tc-body" style="color:var(--t2);font-size:13px;line-height:1.8;">
+    Bu rehberi bir yere not al. Program güncellemek istediğinde bu adımları takip et.
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--cyan);">
+  <div class="tc-title">1️⃣ GitHub'a Giriş Yap</div>
+  <div class="tc-body">
+    Bilgisayardan <b>github.com</b> adresine git.<br>
+    Sağ üstte profil resmine tıkla → <em>Sign in</em> ile giriş yap.<br>
+    Kullanıcı adın: <b>salihtolu</b>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--cyan);">
+  <div class="tc-title">2️⃣ Depoya Git</div>
+  <div class="tc-body">
+    Sol tarafta <b>salihtolu/heidelberg</b> yazan depoya tıkla.<br>
+    Veya doğrudan adres çubuğuna yaz:<br>
+    <em>github.com/salihtolu/heidelberg</em>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--amber);">
+  <div class="tc-title">3️⃣ Dosyayı Sil</div>
+  <div class="tc-body">
+    Dosya listesinde <b>heidelberg_pro_teshis_v3_ios.html</b> dosyasına tıkla.<br>
+    Sağ üstte <b>🗑️ çöp kutusu ikonu</b>na tıkla.<br>
+    Sayfanın altında <b>"Commit changes"</b> butonuna bas.<br>
+    <s>Eski dosya silindi.</s>
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--green);">
+  <div class="tc-title">4️⃣ Yeni Dosyayı Yükle</div>
+  <div class="tc-body">
+    Depo ana sayfasında <b>"Add file"</b> butonuna tıkla.<br>
+    <em>"Upload files"</em> seç.<br>
+    Yeni <b>heidelberg_pro_teshis_v3_ios.html</b> dosyasını sürükle-bırak.<br>
+    Sayfanın altında <b>"Commit changes"</b> butonuna bas.
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--green);">
+  <div class="tc-title">5️⃣ Güncellemeyi Telefondan Gör</div>
+  <div class="tc-body">
+    <b>2-3 dakika bekle.</b><br>
+    Telefonda programı aç.<br>
+    Sayfayı <em>aşağı çekip bırak</em> (yenile hareketi) yap.<br>
+    Güncelleme otomatik yüklenir! ✅
+  </div>
+</div>
+
+<div class="tc" style="border-color:var(--red);background:rgba(255,34,68,.05);">
+  <div class="tc-title" style="color:var(--red2);">⚠️ ÖNEMLİ NOTLAR</div>
+  <div class="tc-body">
+    <s>Dosya adını değiştirme!</s> Hep aynı isim olmalı.<br>
+    <s>Depo adını değiştirme!</s> heidelberg kalmalı.<br>
+    <em>Telefondaki notların silinmez</em> — onlar telefonda saklanır.<br>
+    Program linki hep aynı kalır:<br>
+    <b>salihtolu.github.io/heidelberg/heidelberg_pro_teshis_v3_ios.html</b>
+  </div>
+</div>
+</div>
+
+</div><!-- /content -->
+
+<!-- BOTTOM NAV -->
+<nav class="bnav">
+  <div class="bni bni-err on" id="n-err" onclick="nav('err')">
+    <div class="bni-ic">🚨</div><div class="bni-lb">HATALAR</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-hex" id="n-hex" onclick="nav('hex')">
+    <div class="bni-ic">⬡</div><div class="bni-lb">HEX/KID</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-kart" id="n-kart" onclick="nav('kart')">
+    <div class="bni-ic">🔲</div><div class="bni-lb">KARTLAR</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-qa" id="n-qa" onclick="nav('qa')">
+    <div class="bni-ic">🧪</div><div class="bni-lb">S&CEVAP</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-tip" id="n-tip" onclick="nav('tip')">
+    <div class="bni-ic">⚡</div><div class="bni-lb">PÜF</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-teshis" id="n-teshis" onclick="nav('teshis')">
+    <div class="bni-ic">🎯</div><div class="bni-lb">TEŞHİS</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-klasik" id="n-klasik" onclick="nav('klasik')">
+    <div class="bni-ic">🔩</div><div class="bni-lb">MEKANİK</div><div class="bni-dot"></div>
+  </div>
+  <div class="bni bni-rehber" id="n-rehber" onclick="nav('rehber')">
+    <div class="bni-ic">📋</div><div class="bni-lb">REHBER</div><div class="bni-dot"></div>
+  </div>
+</nav>
+
+<script>
+const qaData=[
+{q:"KID FFFE hatası neden çıkar ve nasıl çözülür?",a:"<b>KID FFFE</b> CAN bus kimlik doğrulamasında çoklu hata. <em>Çözüm:</em> 1) CAN-H/L=60Ω 2) EWM1 PCA82C250 değiştir 3) Flat kablo testi 4) ZSKA pil. Baskı iptalde geçiyorsa EEPROM sıfırla."},
+{q:"EWM1 ısındıkça sorun çıkarıyorsa?",a:"<b>PCA82C250 veya TJA1050</b> CAN transceiver ısıya duyarlı. Soğuk sprey testi → geçerse değiştir. 3-5€, %80+ çözüm. Devam ederse kristal veya besleme kondansatörü."},
+{q:"Kompresör stop'a basmama rağmen durmuyor?",a:"Stop komutu EWM2'den üretilir SVM'ye iletilir. <b>EWM2 CAN'da değilse stop üretemez.</b> EWM2→SVM sinyal hattını ölç. SVM triac/röle tepki veriyor mu?"},
+{q:"Baskı iptalde KID FFFE geçiyor. Neden?",a:"Makine EEPROM'daki eski baskı komutunu uygulamaya çalışıyor ama fiziksel şart yok. Servis → Parametreler → Fabrika sıfırlama."},
+{q:"CAN bus enerji vermeden nasıl test ederim?",a:"CAN-H ve L arası ölç. <em>60Ω=normal.</em> 120Ω=bir terminasyon kopuk. <s>0Ω=kısa devre!</s> OL=terminasyonlar yok."},
+{q:"ZSKA pili değiştirirken dikkat?",a:"<b>ENERJİYİ KESME!</b> SRAM yedek yok, pil çıkınca veri silinir. Çalışır haldeyken değiştir. 2.8V altı → önce EEPROM yedekle."},
+{q:"DNK sürekli çift kağıt hatası veriyor?",a:"1) Teach-in yenile 2) Sensör 0.1mm hizala 3) Pot izopropanol temizle 4) 24V stabil (ripple &lt;100mV) 5) 40kHz osiloskopla doğrula."},
+{q:"NTM voltajlar normal ama F11 veriyor?",a:"<b>Görsel yetmiyor!</b> Sigortaları multimetre ile ölç. Kondansatör ESR ölç. Trafo sargı direnci. Yük altında voltaj düşüyor olabilir."},
+{q:"Baskı kolu sensörü ayarı?",a:"Mesafe: <em>0.5-1.0mm.</em> Baskı kolunu pozisyona getir, sensörü ayarla. Hızlı test: Elle bas, giriyorsa sensör mekanik pozisyon alamıyor."},
+{q:"EWM1 flat kablo testi?",a:"Her teli ayrı multimetre ile: <em>0Ω=sağlam, OL=kopuk.</em> Bükülme noktaları kritik. Görsel sağlam ama içten kopuk olabilir. Kablo tamamen değiştirilmeli."},
+{q:"BAM kartı görevi ve bozulması?",a:"Tüm CAN ağı koordinatörü. Bozulma: PCA82C250 hasar, besleme kondansatörü kuruması, yüksek sıcaklık. LED yeşil sabit=normal, yanıp sönen=hata."},
+{q:"Hata geçmişi nasıl okunur?",a:"Menü → Servis → Hata Geçmişi. Son 50+ kayıt. Tekrarlayan=sistematik sorun. Farklılar=besleme veya CAN sorunu."},
+{q:"Osiloskopta CAN sinyali nasıl görünmeli?",a:"Resesif: H=L=2.5V. Dominant: H=3.5V, L=1.5V, fark=2V. Göz diyagramı açık ve simetrik olmalı."},
+{q:"ESM2 güvenlik rölesi testi?",a:"Çift kanal bağımsız test: Bobin 24V var mı? Her kontak 0Ω iletimde. Röle çekiyor mu? Kontaklar ark yapmış mı?"},
+{q:"NTC sensör testi?",a:"NTC direnci: 25°C=10-47kΩ, 100°C=1-5kΩ. Sonsuz=kopuk, 0Ω=kısa devre. Soğukta doğru ama ısınınca sapıyorsa bozuk."},
+{q:"MID sigorta dirençleri testi?",a:"0.1-1Ω arası. <em>0Ω=sağlam, OL=yanmış.</em> Görsel yanmış görünmeyebilir — multimetre şart!"},
+{q:"SVM kompresörü açmıyor?",a:"EWM2'den açma sinyali geliyor mu? SVM triac/röle çıkışı (220V AC). Basınç sensörü 0.5-4.5V? Basınç düşükse SVM açmaz."},
+{q:"KLM kapak açık hatası?",a:"Tüm kapakları fiziksel kontrol. Her switch 24V=kapalı. KLM opto girişleri. Kablo oksidasyon."},
+{q:"Parametreler fabrika sıfırlaması?",a:"Servis şifresi gerekir. Menü: Servis → Parametreler → Default/Reset. UYARI: Kalibrasyon verileri silinebilir — önce yedek!"},
+{q:"Düşük voltaj CAN gürültü yapar mı?",a:"Evet! +5V 4.7V'a düşünce CAN transceiver sinyal üretemez. Ripple &lt;50mV olmalı. Statik değil dinamik ripple de kontrol et."},
+{q:"SLM tabla motoru sallanıyor?",a:"Darlington veya H-köprü bozuk. PWM osiloskopta ringing var mı? Encoder kesintili. Motor fırça aşınması. Mekanik gevşeklik."},
+{q:"PCA82C250 ile TJA1050 farkı?",a:"Her ikisi CAN transceiver, birbirinin yerine kullanılabilir. TJA1050 daha yeni/düşük güç. Pin dizilimi aynı (8 pin). Besleme 5V olduğunu doğrula."},
+{q:"Soğukta iyi ısındıkça hata?",a:"1) CAN transceiver (soğuk sprey testi) 2) Kristal osilatör 3) Elektrolitik kondansatör ESR 4) Bağlantı oksidasyonu. Soğuk sprey ile her birini ayrı test et."},
+{q:"Flat kablo kopuk tel teşhis?",a:"Bükülme noktaları. Her iki uçtan her tel: 0Ω=sağlam, OL=kopuk. Bükerken değişiyorsa intermittent. Kablo tamamen değiştirilmeli."},
+{q:"Parametre sıfırı sonrası kalibrasyon?",a:"1) Registrasyon kalibrasyonu 2) Mürekkep referansı 3) Tabla pozisyon 4) DNK teach-in 5) Motor hız referansı 6) Sıcaklık offset."},
+{q:"ESR yüksek ama voltaj normal. Değiştirmeli mi?",a:"<b>Evet!</b> Yüksüz normal, yük altında voltaj çöker. CAN hataları, kart resetleri, intermittent arızalar. ESR metre gerçeği söyler."},
+{q:"BAM değiştirilince ne olur?",a:"CAN adresleme sıfırlanır. Aynı firmware versiyonu şart. Öncesi parametreleri yedekle. Mümkünse Heidelberg servisiyle koordineli yap."},
+{q:"10 dakika sonra hata veriyor?",a:"1) Hata zamanını not al 2) Hangi kart sıcak? 3) Soğuk sprey ile soğut → geçerse tanımlandı 4) ESR veya CAN transceiver."},
+{q:"Encoder paraziti?",a:"1) Besleme ripple (+5V gürültülü) 2) Kablo ekranlaması 3) Kaplin gevşekliği 4) Güç kablosu yakınlığı. 100nF bypass kondansatör çoğu zaman çözer."},
+{q:"SVM triac değişimi?",a:"BTA16, BTA24 veya BT139 serisi 16-25A, 600-800V. Gate tetikleme ve snubber (R-C) kontrol. Soğutucu üzerine termal pasta."},
+{q:"Baskı silindiri lastik basıncı?",a:"0.07-0.12 bar (kağıt gramajına göre). Heidelberg özel mastarla ölçülür. Elektrikten önce mekanik kontrol — sorunların %30'u mekaniktir."},
+{q:"DNK hizalandı hala hata?",a:"1) 40kHz osiloskopta 2) Alıcı kağıtsız &gt;2V 3) 24V ripple &lt;100mV 4) Pot dönüşü sorunsuz mu? 5) Karşılaştırıcı entegre 6) Shield bağlı mı?"},
+{q:"EWM kristal frekansı ve testi?",a:"8MHz veya 16MHz. Yüksek empedanslı probla X1 veya X2 bacağına bağla. Temiz sinüs, 0.5-3Vpp. Normal prob kristalı durdurabilir!"},
+{q:"İlk açılışta checklist?",a:"1) NTM voltajlar 2) CAN kimlik 3) Enkoder 4) Emniyet zinciri 5) Sensörler 6) EEPROM doğrulama. Sıralı — önceki başarısızsa sonraki çalışmaz."},
+{q:"Parametreler nasıl yedeklenir?",a:"Servis menüsünden export (şifre gerekir). EPROM programlayıcı. Kağıda el ile tüm değerleri yaz. Pil veya kart değişimi öncesi şart!"},
+{q:"F10 ana motor hatası?",a:"1) İnverter kendi kodunu oku — önce bu! 2) Termik sıfırla 3) Faz akımları dengeli mi? 4) Motor yalıtım direnci 5) EWK referans 0-10V."},
+{q:"CAN shield topraklama?",a:"<em>Tek noktadan topraklama!</em> İki uçtan topraklanırsa akım halkası → EMI artar → CAN hatalar yükselir. Tek nokta olduğunu doğrula."},
+{q:"Intermittent arızalar teşhis?",a:"1) Hata geçmişi düzenli oku 2) Sıcaklık/nem/hız not al 3) Bağlantı noktaları temizle 4) ESR ölç 5) CAN osiloskopta izle 6) Soğuk sprey."},
+{q:"PCA82C250 sonrası sorun devam?",a:"1) Kristal osiloskopta temiz mi? 2) ESR ölçümü 3) CAN kablo ve konnektör 4) BAM şüphelenmeye başla 5) EWM1 tamamen değiştir."},
+{q:"SVM hatasız kompresör açmıyor?",a:"Basınç sensörü düşük → SVM güvenlik gereği açmaz. EWM2 sinyali var ama hat kopuk. Opto giriş bozuk ama CAN sağlam. Sinyal hattını takip et."}
+];
+
+function renderQA(){
+  const list=document.getElementById('qaList');
+  list.innerHTML=qaData.map((item,i)=>`
+    <div class="qa">
+      <div class="qa-q" onclick="togQA(${i})">
+        <div class="qa-num">${i+1}</div>
+        <div class="qa-qtxt">${item.q}</div>
+        <span class="qa-arr" id="qa-a${i}">▶</span>
+      </div>
+      <div class="qa-a" id="qa-b${i}">
+        <div class="qa-atxt">${item.a}</div>
+      </div>
+    </div>
+  `).join('');
+}
+renderQA();
+
+// Build search index
+const searchItems=[];
+document.querySelectorAll('[data-s]').forEach(el=>{
+  const code=el.querySelector('.fi-code,.ki-name')?.textContent||'';
+  const name=el.querySelector('.fi-name,.ki-role')?.textContent||'';
+  const fix=(el.querySelector('.fi-fix')?.textContent||el.querySelector('.ki-val')?.textContent||'').slice(0,200);
+  searchItems.push({el,kw:el.getAttribute('data-s'),code,name,fix});
+});
+
+function doSearch(q){
+  const clr=document.getElementById('SC');
+  if(!q.trim()){clr.style.display='none';nav(currentSec);return;}
+  clr.style.display='block';
+  showOnlySearch();
+  const t=q.toLowerCase();
+  const res=searchItems.filter(d=>d.kw.includes(t)||d.code.toLowerCase().includes(t)||d.name.toLowerCase().includes(t));
+  const c=document.getElementById('SR');
+  if(!res.length){c.innerHTML='<div class="no-res"><div class="no-res-ic">🔍</div><div class="no-res-txt">Sonuç bulunamadı.</div></div>';return;}
+  c.innerHTML=res.map(r=>`<div class="sr"><div class="sr-code">${r.code}</div><div class="sr-name">${r.name}</div><div class="sr-fix">${r.fix.slice(0,150)}...</div></div>`).join('');
+}
+function showOnlySearch(){
+  ['err','hex','kart','qa','tip','teshis','klasik','rehber'].forEach(s=>document.getElementById('sec-'+s).classList.remove('on'));
+  document.getElementById('sec-search').classList.add('on');
+}
+function clearSrch(){
+  document.getElementById('SI').value='';
+  document.getElementById('SC').style.display='none';
+  nav(currentSec);
+}
+
+const SECS=['err','hex','kart','qa','tip','teshis','klasik','rehber'];
+let currentSec='err';
+function nav(s){
+  currentSec=s;
+  document.getElementById('sec-search').classList.remove('on');
+  SECS.forEach(x=>{
+    document.getElementById('sec-'+x).classList.toggle('on',x===s);
+    const ni=document.getElementById('n-'+x);
+    if(ni)ni.classList.toggle('on',x===s);
+  });
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('on',SECS[i]===s));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function tog(id){
+  document.getElementById(id).classList.toggle('o');
+  document.getElementById('a-'+id).classList.toggle('o');
+  if(document.getElementById(id).classList.contains('o')) renderNotes(id);
+}
+function togTp(id){
+  document.getElementById(id).classList.toggle('o');
+  document.getElementById('a-'+id).classList.toggle('o');
+}
+function togQA(i){
+  document.getElementById('qa-b'+i).classList.toggle('o');
+  document.getElementById('qa-a'+i).classList.toggle('o');
+}
+
+// ─── NOT SİSTEMİ ───
+function getNotes(kartId){
+  try{ return JSON.parse(localStorage.getItem('notes_'+kartId)||'[]'); }
+  catch(e){ return []; }
+}
+function saveNotes(kartId,notes){
+  localStorage.setItem('notes_'+kartId,JSON.stringify(notes));
+}
+function escHtml(t){
+  return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function renderNotes(kartId){
+  const box=document.getElementById('notbox_'+kartId);
+  if(!box) return;
+  const notes=getNotes(kartId);
+  if(!notes.length){
+    box.innerHTML='<div style="color:var(--t3);font-size:11px;padding:4px 0;">Henüz not eklenmedi.</div>';
+    return;
+  }
+  box.innerHTML=notes.map((n,i)=>`
+    <div style="background:var(--s3);border:1px solid var(--b2);border-radius:10px;padding:10px 12px;margin-bottom:8px;">
+      <div style="font-size:10px;color:var(--amber2);font-weight:700;margin-bottom:4px;">📝 ${n.tarih}</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.5;white-space:pre-wrap;">${escHtml(n.metin)}</div>
+      <div style="display:flex;gap:8px;margin-top:8px;">
+        <button onclick="notDuzenle('${kartId}',${i})" style="font-size:11px;padding:4px 10px;border-radius:7px;border:1px solid var(--cyan);background:transparent;color:var(--cyan2);cursor:pointer;">✏️ Düzenle</button>
+        <button onclick="notSil('${kartId}',${i})" style="font-size:11px;padding:4px 10px;border-radius:7px;border:1px solid var(--red);background:transparent;color:var(--red2);cursor:pointer;">🗑️ Sil</button>
+      </div>
+    </div>`).join('');
+}
+function notEkleAc(kartId){
+  const f=document.getElementById('notform_'+kartId);
+  if(f) f.style.display=f.style.display==='none'?'block':'none';
+}
+function notKaydet(kartId){
+  const ta=document.getElementById('notyaz_'+kartId);
+  const metin=ta.value.trim();
+  if(!metin){alert('Lütfen bir şeyler yaz!');return;}
+  const notes=getNotes(kartId);
+  const tarih=new Date().toLocaleString('tr-TR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  notes.push({metin,tarih});
+  saveNotes(kartId,notes);
+  ta.value='';
+  document.getElementById('notform_'+kartId).style.display='none';
+  renderNotes(kartId);
+}
+function notSil(kartId,idx){
+  if(!confirm('Bu notu silmek istiyor musun?')) return;
+  const notes=getNotes(kartId);
+  notes.splice(idx,1);
+  saveNotes(kartId,notes);
+  renderNotes(kartId);
+}
+function notDuzenle(kartId,idx){
+  const notes=getNotes(kartId);
+  const yeni=prompt('Notu düzenle:',notes[idx].metin);
+  if(yeni===null) return;
+  notes[idx].metin=yeni.trim();
+  notes[idx].tarih+=' (düzenlendi)';
+  saveNotes(kartId,notes);
+  renderNotes(kartId);
+}
+// ─── PWA: Service Worker Kaydı ───
+if('serviceWorker' in navigator){
+  window.addEventListener('load', ()=>{
+    navigator.serviceWorker.register('/heidelberg/sw.js')
+      .then(reg => {
+        // Güncelleme varsa otomatik uygula
+        reg.addEventListener('updatefound', () => {
+          const newSW = reg.installing;
+          newSW.addEventListener('statechange', () => {
+            if(newSW.state === 'installed' && navigator.serviceWorker.controller){
+              // Yeni versiyon hazır — sessizce güncelle
+              newSW.postMessage({type:'SKIP_WAITING'});
+            }
+          });
+        });
+      }).catch(err => console.log('SW kayıt hatası:', err));
+    
+    // SW güncellendi → sayfayı yenile
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      window.location.reload();
+    });
+  });
+}
+</script>
+</body>
+</html>
 
